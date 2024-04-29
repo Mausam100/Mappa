@@ -5,7 +5,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { RiYoutubeLine } from "react-icons/ri";
 import { BsChevronCompactDown } from "react-icons/bs";
 
-
 const Hero = () => {
   return (
     <main className=" h-[100vh] text-white bg-[#0000007e]">
@@ -45,31 +44,39 @@ const Hero = () => {
             <br />
             よりテレ東系列にて放送開
             <br />
-            始！<br />
-             放送直後より Prime
-            Video <br /> にて最速配信！
+            始！
+            <br />
+            放送直後より Prime Video <br /> にて最速配信！
           </h3>
-          <button className=" border-2 rounded-lg p-1 mt-6 ml-10">OBLIVION BATTERY</button>
-          <h3 className="text-end leading-tighter tracking-tighter font-thin"> TV ANIMATION : APRIL 2024</h3>
+          <button className=" border-2 rounded-lg p-1 mt-6 ml-10">
+            OBLIVION BATTERY
+          </button>
+          <h3 className="text-end leading-tighter tracking-tighter font-thin">
+            {" "}
+            TV ANIMATION : APRIL 2024
+          </h3>
         </div>
       </section>
       <footer className="flex px-6 mt-6 items-center justify-between">
         <div className="scroll h-7 ">
-           <div className="">
-           <a href="" className="text-lg">SCROLL<BsChevronCompactDown  className=" text-6xl"/></a>
-           
-           </div>
-           
+          <div className="">
+            <a href="" className="text-lg">
+              SCROLL
+              <BsChevronCompactDown className=" text-6xl" />
+            </a>
+          </div>
         </div>
         <nav className=" border-2 rounded-2xl flex px-5 ml-10 p-1 w-[40%] items-center justify-between">
-            <a href="">[HOME]</a>  
-            <a href="">[WORKS]</a>  
-            <a href="">[ABOUT]</a>  
-            <a href="">[CAREERS]</a>  
+          <a href="">[HOME]</a>
+          <a href="">[WORKS]</a>
+          <a href="">[ABOUT]</a>
+          <a href="">[CAREERS]</a>
         </nav>
         <div>
           <h3 className=" text-center font-medium text-lg">RECRUITING</h3>
-          <button className="bg-[#006837] py-3 px-4 font-bold rounded-xl" >APPLY NOW</button>
+          <button className="bg-[#006837] py-3 px-4 font-bold rounded-xl">
+            APPLY NOW
+          </button>
         </div>
       </footer>
     </main>
