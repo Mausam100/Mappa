@@ -7,7 +7,7 @@ import { BsChevronCompactDown } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <main className=" h-[100vh] text-white bg-[#0000007e]">
+    <main className=" h-[100vh] text-white ">
       <video
         className=" fixed -z-10 w-[100vw] h-[100vh] object-fill"
         autoPlay
@@ -38,7 +38,7 @@ const Hero = () => {
           <FaXTwitter />
           <RiYoutubeLine className="mt-2" />
         </div>
-        <div className=" bg-[#006837] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
+        <div className=" bg-[#006837b7] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
           <h3 className=" text-end font-thin leading-tighter tracking-tighter">
             4月9日（火）深夜24時
             <br />
@@ -74,7 +74,7 @@ const Hero = () => {
         </nav>
         <div>
           <h3 className=" text-center font-medium text-lg">RECRUITING</h3>
-          <button className="bg-[#006837] py-3 px-4 font-bold rounded-xl">
+          <button className="bg-[#006837b7] py-3 px-4 font-bold rounded-xl">
             APPLY NOW
           </button>
         </div>
