@@ -16,7 +16,7 @@ const Hero = () => {
       >
         <source src={Vedio} />
       </video>
-      <header className=" p-6">
+      <header className=" p-6 h-[10vh]">
         <div className=" w-[15%] h-auto">
           <img src={Logo} alt="logo" className="" />
         </div>
@@ -33,8 +33,8 @@ const Hero = () => {
           </div>
         </div>
       </header>
-      <section className="hero bg-blue-00 w-full pl-6 flex">
-        <div className="text-3xl mt-24">
+      <section className="hero items-center bg-blue-00 w-full h-[70vh] pl-6 flex">
+        <div className="  text-3xl mt-24">
           <FaXTwitter />
           <RiYoutubeLine className="mt-2" />
         </div>
@@ -57,7 +57,7 @@ const Hero = () => {
           </h3>
         </div>
       </section>
-      <footer className="flex px-6 mt-6 items-center justify-between">
+      <footer className="flex w-full h-[10vh] px-6 mt-6 items-center justify-between">
         <div className="scroll h-7 ">
           <div className="">
             <a href="" className="text-lg">
