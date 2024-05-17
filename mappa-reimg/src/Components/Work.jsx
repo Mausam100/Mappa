@@ -9,6 +9,9 @@ import Card4 from "../assets/card3.png";
 import Card5 from "../assets/card4.png";
 import Arrow from "../assets/rightArrow.png";
 import Scroll from "../assets/scroll.png";
+// import cards
+import Cards from './WorkImg'
+import Overlayer from "./Overlayer";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,9 +22,21 @@ import "swiper/css";
 import { Keyboard } from "swiper/modules";
 
 const Work = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
+  const toggleOverlay = () => {
+    setShowOverlay(!showOverlay);
+  };
+
   return (
     <>
       <section className="w-full h-full bg-black text-white p-6 ">
+        {showOverlay && (
+          <div
+            onClick={toggleOverlay}
+          >
+            <Overlayer />
+          </div>
+        )}
         <div className="main flex relative">
           <div className="">
             <img src={GroupText} alt="" srcset="" className=" w-28" />
@@ -42,62 +57,40 @@ const Work = () => {
           modules={[Keyboard]}
           className="mySwiper -mt-6 ml-36"
         >
-          <SwiperSlide className=" cursor-pointer">
-            <div
-             className=""
-             >
-              <div className=" flex items-baseline gap-3">
-                <h1 className=" font-semibold text-lg">OBLIVION BATTERY</h1>{" "}
-                <img src={Arrow} alt="" className=" w-10" />
-              </div>
-              <img src={Card1} alt="" className=" h-[75vh] w-[25vw]" />
-            </div>
+          <SwiperSlide onClick={toggleOverlay} className=" cursor-pointer">
+          
+            <Cards img={Card1} title={"OBLIVION BATTERY"} top={true} />
+            
           </SwiperSlide>
-          <SwiperSlide className="   cursor-pointer">
-            <div>
-              <img src={Card2} alt="" className=" h-[75vh] w-[25vw]" />
-              <div className=" flex items-top gap-3">
+          <SwiperSlide onClick={toggleOverlay} className=" cursor-pointer">
+          
+            <Cards img={Card2} title={"attack on titan"} top={false} />
+            
+          </SwiperSlide>
+          <SwiperSlide onClick={toggleOverlay} className=" cursor-pointer">
+          
+            <Cards img={Card3} title={"Jujutsu Kaisen"} top={true} />
+            
+          </SwiperSlide>
+          <SwiperSlide onClick={toggleOverlay} className=" cursor-pointer">
+          
+            <Cards img={Card4} title={"Maboroshi"} top={false} />
+            
+          </SwiperSlide>
+          <SwiperSlide onClick={toggleOverlay} className=" cursor-pointer">
+          
+            <Cards img={Card5} title={"Chainsaw Man"} top={true} />
+            
+          </SwiperSlide>
+          
+          <SwiperSlide className=" cursor-pointer">
+            <div className="flex items-center justify-center">
+            <div className=" flex items-center gap-3">
                 <h1 className=" font-semibold text-lg uppercase">
-                  Attack on Titan
+                  Explore All
                 </h1>{" "}
                 <img src={Arrow} alt="" className=" w-10" />
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" cursor-pointer">
-            <div>
-              <div className=" flex items-baseline gap-3">
-                <h1 className=" font-semibold text-lg uppercase">
-                  Jujutsu Kaisen
-                </h1>{" "}
-                <img src={Arrow} alt="" className=" w-10" />
-              </div>
-              <img src={Card3} alt="" className=" h-[75vh] w-[25vw]" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" cursor-pointer">
-            <div>
-              <img src={Card4} alt="" className=" h-[75vh] w-[25vw]" />
-              <div className=" flex items-top gap-3">
-                <h1 className=" font-semibold text-lg">MABOROSHI</h1>{" "}
-                <img src={Arrow} alt="" className=" w-10" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" cursor-pointer">
-            <div>
-              <div className=" flex items-baseline gap-3">
-                <h1 className=" font-semibold text-lg uppercase">
-                  ChainSaw man
-                </h1>{" "}
-                <img src={Arrow} alt="" className=" w-10" />
-              </div>
-              <img src={Card5} alt="" className=" h-[75vh] w-[25vw]" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className=" cursor-pointer">
-            <div className="flex">
-              <h1 className=" items-center">Click to watch all</h1>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -109,6 +102,4 @@ const Work = () => {
 };
 
 export default Work;
-
-
 
