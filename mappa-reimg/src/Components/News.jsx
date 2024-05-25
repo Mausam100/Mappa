@@ -39,13 +39,13 @@ const News = () => {
               <h2 className='text-sm sm:text-lg'>{news.date}</h2>
               <h2 className='text-sm sm:text-lg'>{news.title}</h2>
               </div>
-              <button className='text-sm border p-4 sm:text-lg'>{news.button}</button>
+              <button className='text-sm border sm:text-lg'>{news.button}</button>
             </div>
             {expandedIndex === index && <div className="mt-4 text-sm sm:text-lg">{news.details}</div>}
           </div>
         ))}
         <div className='flex uppercase items-center justify-center border-t-[1px] p-8'>
-          <button className='text-lg font-semibold'>Explore All News</button>
+          <button className='text-lg font-semibold'>Explore All</button>
         </div>
       </div>
     </section>

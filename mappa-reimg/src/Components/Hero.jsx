@@ -8,31 +8,14 @@ import { BsChevronCompactDown } from "react-icons/bs";
 const Hero = () => {
   return (
     <main className=" h-[100vh] text-white ">
-      <video
+      {/* <video
         className=" fixed -z-10 w-[100vw] h-[100vh] object-fill"
         autoPlay
         muted
         loop
       >
         <source src={Vedio} />
-      </video>
-      <header className=" p-6 h-[10vh]">
-        <div className=" w-[15%] h-auto">
-          <img src={Logo} alt="logo" className="" />
-        </div>
-        <div className=" w-[14%] h-5 text-sm flex items-center mt-4 border-2 border-[#006837] rounded-2xl">
-          <div className=" w-[48%] flex justify-center items-center">
-            <a href="" className=" font-bold">
-              JP
-            </a>
-          </div>
-          <div className=" w-[50%] flex justify-center items-center border-l-2 border-[#006837]">
-            <a href="" className=" font-bold">
-              EN
-            </a>
-          </div>
-        </div>
-      </header>
+      </video> */}
       <section className="hero items-center bg-blue-00 w-full h-[70vh] pl-6 flex">
         <div className="  text-3xl mt-24">
           <FaXTwitter />
@@ -66,12 +49,6 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <nav className=" border-2 rounded-2xl flex px-5 ml-10 p-1 w-[40%] items-center justify-between">
-          <a href="">[HOME]</a>
-          <a href="">[WORKS]</a>
-          <a href="">[ABOUT]</a>
-          <a href="">[CAREERS]</a>
-        </nav>
         <div>
           <h3 className=" text-center font-medium text-lg">RECRUITING</h3>
           <button className="bg-[#006837b7] py-3 px-4 font-bold rounded-xl">

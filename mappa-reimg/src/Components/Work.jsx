@@ -31,10 +31,6 @@ const Work = () => {
         <div className="main flex relative">
           <div className="">
             <img src={GroupText} alt="" className="w-28" />
-            <img
-              src={Line}
-              className="hidden lg:block absolute left-14 top-14 h-32"
-            />
           </div>
           <h1 className="heading text-4xl border-b-2 mb-10 ml-6 pb-1 flex items-end">
             NEW WORKS

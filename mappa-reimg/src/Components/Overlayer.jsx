@@ -8,14 +8,15 @@ const Overlayer = ({ card, toggleOverlay }) => {
       <div className='w-1/2 h-full justify-center items-center'>
         <h1 className="text-white text-4xl">{card.title}</h1>
         <p className="text-white mt-4">{card.description}</p>
+        <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+            Watch Now
+          </a>
       </div>
       <div className='w-1/2 h-full flex justify-center items-center'>
         <div>
           <img src={card.image} alt={card.title} className=" h-[85vh] w-[25vw]" />
           
-          <a href={card.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-            Watch Now
-          </a>
+          
         </div>
       </div>
     </div>
