@@ -1,28 +1,52 @@
+
 import React from "react";
-import Logo from "../assets/logo.png";
 import Vedio from "../assets/bcvedio.mp4";
-import { FaXTwitter } from "react-icons/fa6";
-import { RiYoutubeLine } from "react-icons/ri";
-import { BsChevronCompactDown } from "react-icons/bs";
+import Vedio2 from "../assets/2nd.mp4";
+import Vedio3 from "../assets/3rd.mp4";
+import Scroll from "../assets/scroll.png"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 
 const Hero = () => {
+  const videos = [
+    Vedio2,
+    Vedio,
+    Vedio3,
+  ];
+
   return (
-    <main className=" h-[100vh] text-white ">
-      {/* <video
-        className=" fixed -z-10 w-[100vw] h-[100vh] object-fill"
-        autoPlay
-        muted
-        loop
-      >
-        <source src={Vedio} />
-      </video> */}
-      <section className="hero items-center bg-blue-00 w-full h-[70vh] pl-6 flex">
-        <div className="  text-3xl mt-24">
-          <FaXTwitter />
-          <RiYoutubeLine className="mt-2" />
-        </div>
-        <div className=" bg-[#006837b7] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
-          <h3 className=" text-end font-thin leading-tighter tracking-tighter">
+    <main className="h-[100vh] text-white bg-black relative">
+      <div>
+        <Swiper
+          modules={[Autoplay]}
+        loop={true}
+        autoplay={{ delay: 8000, disableOnInteraction: false }}
+        speed={2000}
+        slidesPerView={1.6}
+        centeredSlides={true}
+        spaceBetween={30}
+        slideToClickedSlide={true}
+        grabCursor={true}
+        >
+          {videos.map((video, index) => (
+            <SwiperSlide key={index} className="swiper-slide flex justify-center items-center">
+              <video
+                className="w-full h-full transform transition-transform duration-300"
+                src={video}
+                autoPlay
+                loop
+                muted
+              ></video>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <section className=" absolute z-40 top-8 items-center w-full h-[100vh] pl-6 flex">
+        <div className="bg-[#006837b7] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
+          <h3 className="text-end font-thin leading-tighter tracking-tighter">
             4月9日（火）深夜24時
             <br />
             よりテレ東系列にて放送開
@@ -31,7 +55,7 @@ const Hero = () => {
             <br />
             放送直後より Prime Video <br /> にて最速配信！
           </h3>
-          <button className=" border-2 rounded-lg p-1 mt-6 ml-10">
+          <button className="border-2 rounded-lg p-1 mt-6 ml-10">
             OBLIVION BATTERY
           </button>
           <h3 className="text-end leading-tighter tracking-tighter font-thin">
@@ -40,18 +64,15 @@ const Hero = () => {
           </h3>
         </div>
       </section>
+
       <footer className="flex w-full h-[10vh] px-6 mt-6 items-center justify-between">
-        <div className="scroll h-7 ">
-          <div className="">
-            <a href="" className="text-lg">
-              SCROLL
-              <BsChevronCompactDown className=" text-6xl" />
-            </a>
-          </div>
+        <div className="scroll h-7">
+          <img src={Scroll} alt="" className=" w-16" />
+          
         </div>
-        <div>
-          <h3 className=" text-center font-medium text-lg">RECRUITING</h3>
-          <button className="bg-[#006837b7] py-3 px-4 font-bold rounded-xl">
+        <div className=" flex items-center gap-4 rounded-xl bg-[#c4c3c339] py-2 px-4">
+          <h3 className="text-center font-medium text-lg ">RECRUITING</h3>
+          <button className="bg-[#006837b7] py-2 px-5 font-thin rounded-xl">
             APPLY NOW
           </button>
         </div>

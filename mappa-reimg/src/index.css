@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* styles.css or your main CSS file */
+.swiper-slide-prev, .swiper-slide-next {
+    transform: scale(0.8); /* Scale down the side slides */
+    opacity: 0.6; /* Reduce opacity for side slides */
+  }
+  
+  .swiper-slide-active .swiper-video {
+    transform: scale(1); /* Ensure the active slide's video is not scaled */
+    opacity: 1; /* Ensure the active slide's video has full opacity */
+  }
+  

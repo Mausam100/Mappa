@@ -4,7 +4,7 @@ import line from '../assets/Line8.png'
 
 const Navbar = () => {
   return (
-    <nav className='flex p-6 items-center justify-between'>
+    <nav className='flex p-6 items-center justify-between bg-black'>
        <div> 
         <img src={Logo} alt="logo" /></div>
        <div className='flex gap-8 fixed right-6 z-50'>
