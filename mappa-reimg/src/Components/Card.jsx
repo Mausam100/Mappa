@@ -1,7 +1,7 @@
 import React from "react";
 import Arrow from "../assets/rightArrow.png";
 
-function Work_img({title, img, top}) {
+function Card({title, img, top}) {
   return (
     <div className="">
       {top && (
@@ -23,4 +23,4 @@ function Work_img({title, img, top}) {
   );
 }
 
-export default Work_img;
+export default Card;
