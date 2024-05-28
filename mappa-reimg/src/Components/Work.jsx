@@ -8,7 +8,7 @@ import Overlayer from "./Overlayer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Keyboard } from "swiper/modules";
-import cardData from "/src/constant/Details.js"; 
+import cardData from "/src/constant/CardDetails.js"; 
 
 const Work = () => {
   const [showOverlay, setShowOverlay] = useState(false);
