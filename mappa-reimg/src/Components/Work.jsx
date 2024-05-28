@@ -21,7 +21,7 @@ const Work = () => {
 
   return (
     <>
-      <section className="w-full h-full bg-black text-white p-6">
+      <section className="w-full h-full bg-black text-white p-6ee">
         {showOverlay && (
           <Overlayer
             card={selectedCard}
