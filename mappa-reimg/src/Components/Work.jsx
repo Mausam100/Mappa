@@ -3,7 +3,7 @@ import GroupText from "../assets/Group.svg";
 import Line from "../assets/Line7.png";
 import Arrow from "../assets/rightArrow.png";
 import Scroll from "../assets/scroll.png";
-import Cards from "./WorkImg";
+import Cards from "./Card";
 import Overlayer from "./Overlayer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
