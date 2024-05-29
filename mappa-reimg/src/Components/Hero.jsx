@@ -48,7 +48,7 @@ const Hero = () => {
 
   return (
     <>
-      <main className="h-[100vh] text-white bg-black relative overflow-hidden">
+      <main id="home" className="h-[100vh] text-white bg-black relative overflow-hidden">
         <div>
           <Swiper
             ref={tl}
