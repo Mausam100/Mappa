@@ -8,9 +8,9 @@ const Navbar = () => {
        <div> 
         <img src={Logo} alt="logo" /></div>
        <div className='flex gap-8 fixed right-6 z-50'>
-        <a className=' bg-[#006837b7] px-1 rounded-sm' href="#">HOME</a>
-        <a href="#">NEW WORKS</a>
-        <a href="#">NEWS</a>
+        <a className=' bg-[#006837b7] px-1 rounded-sm' href="#home">HOME</a>
+        <a href="#work">NEW WORK</a>
+        <a href="#news">NEWS</a>
         <a href="#">MERCH</a>
         {/* line */}
         <span className=' py-3 w-16 h-1'><img src={line} alt="" /></span>

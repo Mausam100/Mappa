@@ -24,12 +24,12 @@ const Hero = () => {
       scrollTrigger: {
         trigger: ".hero",
         start: "top -30%",
-        
-
-        
+        end: "top 40%",
+        scrub: true,
+        pin: true,
       },
-    });
-  });
+    });
+  });
   
 
   useGSAP(() => {
@@ -48,7 +48,7 @@ const Hero = () => {
 
   return (
     <>
-      <main className="h-[100vh] text-white bg-black relative overflow-hidden">
+      <main id="home" className="h-[100vh] text-white bg-black relative overflow-hidden">
         <div>
           <Swiper
             ref={tl}

@@ -17,7 +17,7 @@ const News = () => {
   };
 
   return (
-    <section className='w-full h-full bg-black text-white p-6'>
+    <section id="news" className='w-full h-full bg-black text-white p-6'>
       <div className="main flex items-center flex-col lg:flex-row">
         <div className="">
           <img src={GroupText} alt="" className="w-28" />
