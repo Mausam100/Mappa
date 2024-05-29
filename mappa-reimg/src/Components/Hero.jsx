@@ -24,12 +24,12 @@ const Hero = () => {
       scrollTrigger: {
         trigger: ".hero",
         start: "top -30%",
-        
-
-        
+        end: "top 40%",
+        scrub: true,
+        pin: true,
       },
-    });
-  });
+    });
+  });
   
 
   useGSAP(() => {
