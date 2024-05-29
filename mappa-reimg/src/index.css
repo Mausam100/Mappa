@@ -1,6 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  font-family: "Inder",sans-serif;
+}
+
+.divscroller{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  display: block;
+}
+
+/* .divscroller::-webkit-scrollbar-thumb {
+  scrollbar-width: thin;
+  background-color: 
+} */
+
+.divscroller::-webkit-scrollbar-thumb {
+  background: #F0F0F0;
+  border-radius: 20px;
+  width: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+  background-color: #2a2a2a;
+  border-radius: 20px;
+}
 
 /* styles.css or your main CSS file */
 .swiper-slide-prev, .swiper-slide-next {
@@ -8,8 +39,13 @@
     opacity: 0.6; /* Reduce opacity for side slides */
   }
   
-  .swiper-slide-active .swiper-video {
+.swiper-slide-active .swiper-video {
     transform: scale(1); /* Ensure the active slide's video is not scaled */
     opacity: 1; /* Ensure the active slide's video has full opacity */
-  }
-  
+}
+
+.inder-regular {
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
