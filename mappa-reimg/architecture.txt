@@ -1,0 +1,7 @@
+/assets
+	favicon.ico
+	/images
+		/icons
+		/cards
+		/product
+		/social
