@@ -2,6 +2,13 @@
 	favicon.ico
 	/images
 		/icons
-		/cards
-		/product
-		/social
+		/posters (for cards)
+		/products
+	/videos
+		x-trailer.mp4
+	/fonts
+		noto-sans-cjk-jp (logo)
+		Europa (og)
+		urw-din-condensed (og)
+		urw-din (og)
+		

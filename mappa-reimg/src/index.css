@@ -1,11 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: "Inder",sans-serif;
+@font-face {
+  font-family: "mavenpro-regular";
+  font-weight: 400;
+  src: url(./assets/fonts/maven-pro/MavenPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: "mavenpro-bold";
+  font-weight: 600;
+  src: url(./assets/fonts/maven-pro/MavenPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: "mavenpro-black";
+  font-weight: 900;
+  src: url(./assets/fonts/maven-pro/MavenPro-Black.ttf);
+}
+
+@font-face {
+  font-family: "mavenpro-medium";
+  font-weight: 500;
+  src: url(./assets/fonts/maven-pro/MavenPro-Medium.ttf);
+}
+
+
+@font-face {
+  font-family: "inder";
+  font-weight: 400;
+  src: url(./assets/fonts/Inder/Inder-Regular.ttf);
+}
+
+
+.tooltip {
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-font{
+  font-family: "mavenpro-medium";
+}
+
+.maven{
+  font-family: "mavenpro-regular";
 }
 
 .divscroller{
@@ -15,11 +55,6 @@
   display: block;
 }
 
-/* .divscroller::-webkit-scrollbar-thumb {
-  scrollbar-width: thin;
-  background-color: 
-} */
-
 .divscroller::-webkit-scrollbar-thumb {
   background: #F0F0F0;
   border-radius: 20px;
@@ -27,9 +62,14 @@
 }
 
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 8px;
+  width: 4px;
+  scroll-behavior: smooth;
   background-color: #2a2a2a;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006837;
   border-radius: 20px;
 }
 
@@ -42,10 +82,4 @@
 .swiper-slide-active .swiper-video {
     transform: scale(1); /* Ensure the active slide's video is not scaled */
     opacity: 1; /* Ensure the active slide's video has full opacity */
-}
-
-.inder-regular {
-  font-family: "Inder", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }

@@ -69,7 +69,7 @@ const Hero = () => {
                 className="swiperSlide flex justify-center items-center"
               >
                 <video
-                  className="w-full h-full transform transition-transform duration-300"
+                  className="w-full h-full transform transition-transform duration-300 rounded-md object-contain"
                   src={video}
                   autoPlay
                   loop

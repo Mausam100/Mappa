@@ -2,22 +2,34 @@ import React, { useState } from 'react';
 import GroupText from "../assets/Group.svg";
 
 const newsData = [
-  { date: "01/01/2024", title: "Welcome to news section 1", details: "Detailed news content for section 1.", button:"Corporate" },
-  { date: "02/01/2024", title: "Welcome to news section 2", details: "Detailed news content for section 2.", button:"INFO" },
-  { date: "03/01/2024", title: "Welcome to news section 3", details: "Detailed news content for section 3.", button:"INFO" },
-  { date: "04/01/2024", title: "Welcome to news section 4", details: "Detailed news content for section 4.", button:"INFO" },
-  { date: "05/01/2024", title: "Welcome to news section 5", details: "Detailed news content for section 5.", button:"INFO" },
+  { date: "2024.04.01", title: "新経営体制に関するお知らせ", details: "", link:false, tag:"CORPORATE" },
+  { date: "2024.03.24", title: "『ぶっちぎり?!』クライマックスPV公開！", details: "https://twitter.com/bucchigiri_PR/status/1771731709777858974", link:true, tag:"INFO" },
+  { date: "2024.03.23", title: "『忘却バッテリー』放送直前ビジュアル公開！", details: "Detailed news content for section 3.", link:false, tag:"INFO" },
+  { date: "2024.03.22", title: "『全修。』制作決定！ティザービジュアル＆PV公開！", details: "Detailed news content for section 4.", link:false, tag:"INFO" },
+  { date: "2023.12.29", title: "『呪術廻戦』続編「死滅回游」制作決定！", details: "Detailed news content for section 5.", link:false, tag:"INFO" },
 ];
 
 const News = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
-  const handleHeadlineClick = (index) => {
-    setExpandedIndex(index === expandedIndex ? null : index);
+  const handleHeadlineClick = (currentindex) => {
+    return (
+      <div>
+        {newsData.map((item,index) => {
+          if (item.link && index === currentindex) {
+            window.location.href = item.details;
+            setExpandedIndex(null);
+            return null;
+          } else {
+            return <div className='absolute z-100 top-1/2 left-1/2 w-3/4 h-3/4 bg-sky-400' key={item.id}><p>{item.content}</p></div>;
+          }
+        })}
+      </div>
+    );
   };
 
   return (
-    <section id="news" className='w-full h-full bg-black text-white p-6'>
+    <section id="news" className='maven w-full h-full bg-black text-white p-6'>
       <div className="main flex items-center flex-col lg:flex-row">
         <div className="">
           <img src={GroupText} alt="" className="w-28" />
@@ -31,21 +43,20 @@ const News = () => {
         {newsData.map((news, index) => (
           <div
             key={index}
-            className={`flex flex-col uppercase items-center justify-between border-t-[1px] p-8 cursor-pointer transition-all duration-300 ${expandedIndex === index ? 'h-auto' : 'h-16 overflow-hidden'}`}
+            className={`flex flex-col uppercase items-center justify-center border-t-[1px] px-6 cursor-pointer transition-all duration-300 h-16 overflow-hidden`}
             onClick={() => handleHeadlineClick(index)}
           >
-            <div className="flex w-full justify-between">
+            <div className="flex w-full justify-between items-center">
               <div className='flex gap-20'>
               <h2 className='text-sm sm:text-lg'>{news.date}</h2>
               <h2 className='text-sm sm:text-lg'>{news.title}</h2>
               </div>
-              <button className='text-sm border sm:text-lg'>{news.button}</button>
+              <tag className='text-sm border px-3 rounded-full sm:text-lg'>{news.tag}</tag>
             </div>
-            {expandedIndex === index && <div className="mt-4 text-sm sm:text-lg">{news.details}</div>}
           </div>
         ))}
         <div className='flex uppercase items-center justify-center border-t-[1px] p-8'>
-          <button className='text-lg font-semibold'>Explore All</button>
+          <tag className='text-lg font-semibold'>Explore All</tag>
         </div>
       </div>
     </section>
