@@ -1,7 +1,11 @@
 import React, { useRef } from "react";
-import Vedio from "../assets/bcvedio.mp4";
-import Vedio2 from "../assets/2nd.mp4";
-import Vedio3 from "../assets/3rd.mp4";
+import OblivionTrailer from "../assets/videos/oblivion-battery-trailer.mp4";
+import BucchigiriTrailer from "../assets/videos/bucchigiri-trailer.mp4";
+import MaboroshiTrailer from "../assets/videos/maboroshi-trailer.mp4";
+import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
+import JJKTrailer from "../assets/videos/jujutsu-kaisen-trailer.mp4";
+import ChainsawTrailer from "../assets/videos/chainsawman-rezearc-trailer.mp4";
+
 import Scroll from "../assets/scroll.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,7 +16,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Hero = () => {
-  const videos = [Vedio2, Vedio, Vedio3];
+  const videos = [OblivionTrailer, BucchigiriTrailer, MaboroshiTrailer,AOTTrailer, JJKTrailer, ChainsawTrailer,];
 
   gsap.registerPlugin(ScrollTrigger);
   const tl = useRef();
@@ -69,7 +73,7 @@ const Hero = () => {
                 className="swiperSlide flex justify-center items-center"
               >
                 <video
-                  className="w-full h-full transform transition-transform duration-300"
+                  className="w-full h-full transform transition-transform duration-300 rounded-md object-contain"
                   src={video}
                   autoPlay
                   loop
@@ -80,10 +84,7 @@ const Hero = () => {
           </Swiper>
         </div>
 
-        <section
-          ref={hide}
-          className=" absolute z-40 top-8 items-center w-full h-[100vh] pl-6 flex"
-        >
+        <section ref={hide} className=" absolute z-40 top-6 items-center w-full h-[100vh] pl-16 flex">
           <div className="bg-[#006837b7] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
             <h3 className="text-end font-thin leading-tighter tracking-tighter">
               4月9日（火）深夜24時
@@ -106,7 +107,7 @@ const Hero = () => {
 
         <footer
           ref={hide}
-          className="flex w-full h-[10vh] px-6 mt-6 items-center justify-between z-50"
+          className="flex w-full h-[40vh] px-6 mt-6 items-center justify-between z-50"
         >
           <div className="scroll h-7">
             <img src={Scroll} alt="" className=" w-16" />

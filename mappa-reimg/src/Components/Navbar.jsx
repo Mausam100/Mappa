@@ -4,11 +4,11 @@ import line from '../assets/Line8.png'
 
 const Navbar = () => {
   return (
-    <nav className='flex p-6 items-center justify-between bg-black'>
+    <nav className='flex p-6 items-center justify-between bg-[#000] nav-font text-md'>
        <div> 
         <img src={Logo} alt="logo" /></div>
        <div className='flex gap-8 fixed right-6 z-50'>
-        <a className=' bg-[#006837b7] px-1 rounded-sm' href="#home">HOME</a>
+        <a className=' bg-[#006837] px-2 rounded-sm' href="#home">HOME</a>
         <a href="#work">NEW WORK</a>
         <a href="#news">NEWS</a>
         <a href="#">MERCH</a>
