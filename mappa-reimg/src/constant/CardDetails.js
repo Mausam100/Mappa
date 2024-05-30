@@ -1,7 +1,7 @@
 // src/constant/Details.js
-import Card1 from "../assets/card5.png";
-import Card2 from "../assets/card2.png";
-import Card3 from "../assets/card1.png";
+import ZenshuCard from "../assets/images/posters/zenshu.webp";
+import BucchigiriCard from "../assets/images/posters/bucchigiri.webp";
+import OblivionCard from "../assets/images/posters/oblivion_battery.webp";
 import Card4 from "../assets/card3.png";
 import Card5 from "../assets/card4.png";
 
@@ -11,21 +11,21 @@ const cardData = [
     description:
       "It is a story about a famous baseball battle consisting of the genius pitcher Haruka Kiyomine and skilled catcher Kei Kaname.",
     link: "https://youtu.be/su59OOuWMMs?si=DrwdcdVTyE6ElCz-",
-    image: Card1,
+    image: OblivionCard,
   },
   {
     title: "Attack on Titan",
     description:
       "In a world where humanity is on the brink of extinction due to giant humanoid Titans, Eren Yeager joins the Scout Regiment to fight back and uncover the truth behind the Titans' origins.",
     link: "https://youtu.be/MGRm4IzK1SQ",
-    image: Card2,
+    image: BucchigiriCard,
   },
   {
     title: "Jujutsu Kaisen",
     description:
       "Yuji Itadori, a high school student with extraordinary physical abilities, joins a secret organization of Jujutsu Sorcerers to fight against curses and uncover the mysteries of the supernatural.",
     link: "https://youtu.be/wHxREj8TC1c",
-    image: Card3,
+    image: ZenshuCard,
   },
   {
     title: "Maboroshi",
