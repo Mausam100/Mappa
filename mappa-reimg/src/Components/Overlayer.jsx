@@ -12,7 +12,7 @@ const Overlayer = ({ card, toggleOverlay }) => {
       <div className='flex items-center justify-between w-full h-full p-20'>
         <div className='w-[70%] h-full flex items-center justify-between flex-col'>
           <div className='w-full h-[15%]'>
-            <h1 className='text-xl'>忘却バッテリー (Oblivion Battery)</h1>
+            <h1 className='text-xl'>忘却バッテリー ({card.title} )</h1>
             <h5 className='text-xs'>TV ANIMATION / 2024 4</h5>
           </div>
           <div className='w-full h-[85%] flex flex-row justify-between'>
