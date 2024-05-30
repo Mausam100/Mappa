@@ -52,7 +52,7 @@ const Hero = () => {
 
   return (
     <>
-      <main id="home" className="h-[100vh] text-white bg-black relative overflow-hidden">
+      <main id="home" className="h-full text-white bg-black relative overflow-hidden">
         <div>
           <Swiper
             ref={tl}
@@ -65,7 +65,7 @@ const Hero = () => {
             spaceBetween={30}
             slideToClickedSlide={true}
             grabCursor={true}
-            className=""
+            className=" h-[80vh]"
           >
             {videos.map((video, index) => (
               <SwiperSlide
