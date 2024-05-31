@@ -56,11 +56,11 @@ const Work = () => {
               />
             </SwiperSlide>
           ))}
-          <SwiperSlide className="cursor-pointer">
-            <div className="flex items-center justify-center">
+          <SwiperSlide className="cursor-pointer flex items-center justify-center top-52">
+            <div className="">
               <div className="flex items-center gap-3">
                 <h1 className="font-semibold text-lg uppercase">Explore All</h1>
-                <img src={Arrow} alt="" className="w-10" />
+                <img src={Arrow} alt="" className=" w-5" />
               </div>
             </div>
           </SwiperSlide>

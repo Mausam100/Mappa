@@ -1,7 +1,7 @@
 // src/constant/Details.js
 import ZenshuCard from "../assets/images/posters/zenshu.webp";
 import BucchigiriCard from "../assets/images/posters/bucchigiri.webp";
-import OblivionCard from "../assets/images/posters/oblivion_battery.webp";
+import OblivionCard from "../assets/images/posters/oblivion-battery.png";
 import Card4 from "../assets/card3.png";
 import Card5 from "../assets/card4.png";
 
