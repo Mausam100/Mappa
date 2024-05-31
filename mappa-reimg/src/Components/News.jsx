@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import GroupText from "../assets/Group.svg";
+import GroupText from "../assets/images/Group.svg";
+import { Element } from 'react-scroll';
+
 
 const newsData = [
   { date: "2024.04.01", title: "新経営体制に関するお知らせ", details: "株式会社MAPPA（代表取締役社長：大塚 学、本社：東京都杉並区）は、2024年4月より下記の通り新経営体制となりましたので、お知らせいたします。", link:false, tag:"CORPORATE" },
@@ -41,7 +43,7 @@ const News = () => {
 
 
   return (
-    <section id="news" className='maven w-full h-full bg-black text-white p-6'>
+    <Element name='news' id="news" className=' maven w-full h-full bg-black text-white p-6'>
       <div className="main flex items-center flex-col lg:flex-row">
         <div className="">
           <img src={GroupText} alt="" className="w-28" />
@@ -75,7 +77,7 @@ const News = () => {
         )}
         </div>
       </div>
-    </section>
+    </Element>
   );
 }
 

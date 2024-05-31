@@ -1,5 +1,5 @@
 import React from "react";
-import Arrow from "../assets/rightArrow.png";
+import Arrow from "../assets/images/rightArrow.png";
 
 function Card({title, img, top}) {
   return (

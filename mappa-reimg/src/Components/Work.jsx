@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import GroupText from "../assets/Group.svg";
-import Line from "../assets/Line7.png";
-import Arrow from "../assets/rightArrow.png";
-import Scroll from "../assets/scroll.png";
+import GroupText from "../assets/images/Group.svg";
+import Line from "../assets/images/Line7.png";
+import Arrow from "../assets/images/rightArrow.png";
+import Scroll from "../assets/images/scroll.png";
 import Cards from "./Card";
 import Overlayer from "./Overlayer";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,6 +10,7 @@ import "swiper/css";
 import { Keyboard } from "swiper/modules";
 import cardData from "/src/constant/CardDetails.js"; 
 import { motion } from "framer-motion";
+import {  Element } from 'react-scroll';
 
 
 const Work = () => {
@@ -23,7 +24,7 @@ const Work = () => {
 
   return (
     <>
-    <div className="w-full h-full bg-black text-white">
+    <Element name="section2" className=" w-full h-full bg-black text-white">
 
       <section 
       
@@ -88,7 +89,7 @@ const Work = () => {
         </motion.div>
         <img src={Scroll} alt="" className="p-6 w-28" />
       </section>
-    </div>
+    </Element>
     </>
   );
 };

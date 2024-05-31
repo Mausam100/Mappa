@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
+import { Element } from 'react-scroll';
 
 const Footer = () => {
+
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    const handleClick = () => {
+      scroll.scrollToTop(0);
+    };
+
+    const headingElement = headingRef.current;
+    headingElement.addEventListener('click', handleClick);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      headingElement.removeEventListener('click', handleClick);
+    };
+  }, []);
+
   return (
-    <footer className="bg-black text-white py-10 px-5">
+    <Element name='footer' className="bg-black text-white py-10 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <h3 className="text-lg font-semibold mb-2">CONTACT</h3>
@@ -50,13 +69,13 @@ const Footer = () => {
         </div>
         <p className="text-sm text-gray-500">© MAPPA LTD 2024 All rights reserved</p>
         <a href="#top" className="text-gray-400 flex items-center">
-          <span>back to top</span>
+          <span ref={headingRef} >back to top</span>
           <svg className="w-6 h-6 ml-2" fill="currentColor" viewBox="0 0 24 24">
             {/* SVG Path for Arrow Icon */}
           </svg>
         </a>
       </div>
-    </footer>
+    </Element>
   );
 };
 

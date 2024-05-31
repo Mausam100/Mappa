@@ -1,9 +1,10 @@
 import React from "react";
-import Logo from "../assets/whiteLogo.png";
-import line from "../assets/Line8.png";
-import { motion, useAnimate, stagger } from "framer-motion";
+import Logo from "../assets/images/whiteLogo.png";
+import line from "../assets/images/Line8.png";
+import { motion, } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   useGSAP(() => {
@@ -27,48 +28,47 @@ const Navbar = () => {
       </motion.div>
 
       <div id="navlinks" className="flex gap-8 fixed right-6 z-50">
-        <a className="bg-[#006837] px-2 rounded-sm " href="#home">
+        <Link className="bg-[#006837] px-2 rounded-sm cursor-pointer  " to="home" >
           HOME
-        </a>
-        <a
-          href="#work"
-          className="relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
+        </Link>
+        <Link to="work"  smooth={true} duration={500}
+          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
         >
           NEW WORK
-        </a>
-        <a
-          href="#news"
-          className="relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
+        </Link>
+        <Link
+          to="news" smooth={true} duration={500}
+          className=" cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
         >
           NEWS
-        </a>
-        <a
-          href="#"
-          className="relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
+        </Link>
+        <Link
+          to="#"
+          className=" cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
         >
           MERCH
-        </a>
+        </Link>
         <span className="py-3 w-16 h-1">
           <img src={line} alt="line" />
         </span>
-        <a
-          href="#"
-          className="relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
+        <Link
+          to="footer" smooth={true} duration={500}
+          className=" cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
         >
           ABOUT
-        </a>
-        <a
+        </Link>
+        <Link
           href="#"
-          className="relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
+          className=" cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
         >
           WORKS
-        </a>
-        <a
+        </Link>
+        <Link
           href="#"
-          className="relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
+          className=" cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
         >
           CAREERS
-        </a>
+        </Link>
       </div>
     </nav>
   );
