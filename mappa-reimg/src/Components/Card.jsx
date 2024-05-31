@@ -10,7 +10,7 @@ function Card({title, img, top}) {
           <img src={Arrow} alt="" className=" w-10 " />
         </div>
       )}
-      <img src={img} alt="" className=" h-[70vh] w-[20vw]" />
+      <img src={img} alt="" className=" h-[75vh] w-[25vw]" />
 
       
       {!top && (
