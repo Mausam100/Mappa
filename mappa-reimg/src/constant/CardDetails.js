@@ -1,9 +1,9 @@
 // src/constant/Details.js
 import ZenshuCard from "../assets/images/posters/zenshu.webp";
 import BucchigiriCard from "../assets/images/posters/bucchigiri.webp";
-import OblivionCard from "../assets/images/posters/oblivion_battery.webp";
-import Card4 from "../assets/images/card3.png";
-import Card5 from "../assets/images/card4.png";
+import OblivionCard from "../assets/images/posters/oblivion-battery.png";
+import Maboroshi from "../assets/images/posters/Maboroshi.png";
+import Chainsaw from "../assets/images/posters/chainsaw.png";
 
 const cardData = [
   {
@@ -32,14 +32,14 @@ const cardData = [
     description:
       "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.",
     link: "https://youtu.be/6UbVrN5dJsk?si=BZxCzZrXzXHhLtF4",
-    image: Card4,
+    image: Maboroshi,
   },
   {
     title: "Chainsaw Man",
     description:
       "Denji, a poor young man, will do anything for money, even hunting down devils with his pet devil-dog Pochita. He’s a simple man with simple dreams, drowning under a mountain of debt.",
     link: "https://youtu.be/djzUppCI0Zs?si=nfhX02zJcXg5MzHs",
-    image: Card5,
+    image: Chainsaw,
   },
 ];
 

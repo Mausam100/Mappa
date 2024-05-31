@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import GroupText from "../assets/images/Group.svg";
-import Line from "../assets/images/Line7.png";
-import Arrow from "../assets/images/rightArrow.png";
-import Scroll from "../assets/images/scroll.png";
+import GroupText from "../assets/images/icons/Group.svg";
+import Arrow from "../assets/images/icons/rightArrow.png";
+import Scroll from "../assets/images/icons/Scroll.png";
 import Cards from "./Card";
 import Overlayer from "./Overlayer";
 import { Swiper, SwiperSlide } from "swiper/react";

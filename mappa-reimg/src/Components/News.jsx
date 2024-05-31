@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GroupText from "../assets/images/Group.svg";
+import GroupText from "../assets/images/icons/Group.svg";
 import { Element } from 'react-scroll';
 
 

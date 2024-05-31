@@ -6,7 +6,7 @@ import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
 import JJKTrailer from "../assets/videos/jujutsu-kaisen-trailer.mp4";
 import ChainsawTrailer from "../assets/videos/chainsawman-rezearc-trailer.mp4";
 
-import Scroll from "../assets/images/scroll.png";
+import Scroll from "../assets/images/icons/Scroll.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";

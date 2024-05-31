@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "../assets/images/whiteLogo.png";
-import line from "../assets/images/Line8.png";
+import Logo from "../assets/images/icons/logo.svg";
+import line from "../assets/images/icons/Line8.png";
 import { motion, } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
