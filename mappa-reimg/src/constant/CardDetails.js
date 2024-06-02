@@ -1,9 +1,9 @@
 // src/constant/Details.js
 import ZenshuCard from "../assets/images/posters/zenshu.webp";
 import BucchigiriCard from "../assets/images/posters/bucchigiri.webp";
-import OblivionCard from "../assets/images/posters/oblivion-battery.png";
-import Maboroshi from "../assets/images/posters/Maboroshi.png";
-import Chainsaw from "../assets/images/posters/chainsaw.png";
+import OblivionCard from "../assets/images/posters/oblivion_battery.webp";
+import Maboroshi from "../assets/images/posters/maboroshi.webp";
+import Chainsaw from "../assets/images/posters/chainsaw.webp";
 
 const cardData = [
   {

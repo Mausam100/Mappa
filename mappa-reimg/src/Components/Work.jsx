@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import GroupText from "../assets/images/icons/Group.svg";
-import Arrow from "../assets/images/icons/rightArrow.png";
-import Scroll from "../assets/images/icons/Scroll.png";
+// import GroupText from "../assets/images/icons/Group.svg";
+// import Arrow from "../assets/images/icons/rightArrow.png";
+// import Scroll from "../assets/images/icons/Scroll.png";
 import Cards from "./Card";
 import Overlayer from "./Overlayer";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -37,7 +37,7 @@ const Work = () => {
         <motion.div
          className="main flex relative">
           <div className="">
-            <motion.img animate={{rotate:360}} transition={{repeat: Infinity, duration: 25  , ease: "linear" }} src={GroupText} alt="" className="w-28" />
+            {/* <motion.img animate={{rotate:360}} transition={{repeat: Infinity, duration: 25  , ease: "linear" }} src={GroupText} alt="" className="w-28" /> */}
           </div>
           <h1 className="heading text-4xl border-b-2 mb-10 ml-6 pb-1 flex items-end">
             NEW WORKS
@@ -80,13 +80,13 @@ const Work = () => {
             <div className="">
               <div className="flex gap-3">
                 <h1 className="font-semibold text-lg uppercase">Explore All</h1>
-                <img src={Arrow} alt="" className=" w-6" />
+                {/* <img src={Arrow} alt="" className=" w-6" /> */}
               </div>
             </div>
           </SwiperSlide>
         </Swiper>
         </motion.div>
-        <img src={Scroll} alt="" className="p-6 w-28" />
+        {/* <img src={Scroll} alt="" className="p-6 w-28" /> */}
       </section>
     </Element>
     </>

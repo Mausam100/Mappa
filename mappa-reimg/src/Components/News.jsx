@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GroupText from "../assets/images/icons/Group.svg";
+// import GroupText from "../assets/images/icons/Group.svg";
 import { Element } from 'react-scroll';
 
 
@@ -46,7 +46,7 @@ const News = () => {
     <Element name='news' id="news" className=' maven w-full h-full bg-black text-white p-6'>
       <div className="main flex items-center flex-col lg:flex-row">
         <div className="">
-          <img src={GroupText} alt="" className="w-28" />
+          {/* <img src={GroupText} alt="" className="w-28" /> */}
         </div>
         <h1 className="heading text-4xl border-b-2 mb-10 lg:mb-0 ml-6 pb-1 flex items-end">
           NEWS

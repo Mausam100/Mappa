@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../assets/images/icons/logo.svg";
-import line from "../assets/images/icons/Line8.png";
+import Logo from "../assets/brand_assets/logo.svg";
+// import line from "../assets/images/icons/Line8.png";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -95,7 +95,7 @@ const Navbar = () => {
           MERCH
         </Link>
         <span className="py-3 w-16 h-1">
-          <img src={line} alt="line" />
+          <div className="w-[12px] h-[2px] bg-white"></div>
         </span>
         <Link
           to="footer"
