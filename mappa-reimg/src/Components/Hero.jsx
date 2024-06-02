@@ -30,26 +30,15 @@ const Hero = () => {
   const tl = useRef();
   const hide = useRef();
 
-  useGSAP(() => {
-    gsap.to(hide.current, {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".hero",
-        start: "top -30%",
-        end: "top 40%",
-        scrub: true,
-        pin: true,
-      },
-    });
-  });
+ 
 
   useGSAP(() => {
     gsap.to(tl.current, {
-      scaleX: 2,
-      scaleY: 2,
+      scaleX: 1.5,
+      scaleY: 1.5,
 
       scrollTrigger: {
-        trigger: ".main",
+        trigger: ".app",
         start: "top 0",
         end: "bottom top",
         markers: true,
@@ -131,7 +120,7 @@ const Hero = () => {
           </section>
 
           <footer
-            ref={hide}
+          
             className="flex w-full h-[40vh] px-6 mt-0 items-center justify-between z-50"
           >
             <div className="scroll h-7">

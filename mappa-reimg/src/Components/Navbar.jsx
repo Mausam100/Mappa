@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Logo from "../assets/images/icons/logo.svg";
 import line from "../assets/images/icons/Line8.png";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+
 import { Link } from "react-scroll";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  
 
   useGSAP(() => {
     gsap.from("#navlinks a,span", {
@@ -25,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex p-6 items-center justify-between bg-[#000] nav-font text-md">
+    <nav  className="nav flex p-6 items-center justify-between bg-[#000] nav-font text-md">
       <motion.div
         initial={{ x: -300 }}
         animate={{ x: 0 }}
@@ -56,7 +59,7 @@ const Navbar = () => {
       </div>
       <div
         id="navlinks"
-        className={`fixed right-6 z-50 lg:static lg:flex gap-8 transition-all duration-500 ease-in-out ${
+        className={` right-6 z-50 lg:static lg:flex gap-8 transition-all duration-500 ease-in-out ${
           isOpen
             ? "flex flex-col items-center bg-[#006837] p-4 top-16 left-0 w-full"
             : "hidden"
