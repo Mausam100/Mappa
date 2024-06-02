@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/brand_assets/logo.svg";
-// import line from "../assets/images/icons/Line8.png";
+import line from "../assets/images/icons/Line8.png";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -49,7 +49,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               transition={{ duration: 1.5 }}
             >
-              <IoIosMenu onClick={clickMenu} className=" text-4xl" />
+              <IoIosMenu  className=" text-4xl" />
             </motion.div>
           )}
         </button>
@@ -95,8 +95,11 @@ const Navbar = () => {
           MERCH
         </Link>
         <span className="py-3 w-16 h-1">
-          <div className="w-[12px] h-[2px] bg-white"></div>
+          <img src={line} alt="line" />
         </span>
+        {/* <span className="py-3 w-16 h-1 flex items-center justify-center"> */}
+          {/* <div className="w-[9vw] h-[1px] bg-white"></div> */}
+        {/* </span> */}
         <Link
           to="footer"
           smooth={true}
