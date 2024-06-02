@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import Logo from "../assets/images/icons/logo.svg";
-=======
-import React, { useState } from "react";
-import Logo from "../assets/brand_assets/logo.svg";
->>>>>>> 4ac7f6d068814e383f70d6cb32e2a7fba2723d19
 import line from "../assets/images/icons/Line8.png";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -15,8 +10,6 @@ import { IoIosMenu, IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  
 
   useGSAP(() => {
     gsap.from("#navlinks a,span", {
@@ -33,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav  className="nav flex p-6 items-center justify-between bg-[#000] nav-font text-md">
+    <nav className="nav flex p-6 items-center justify-between bg-[#000] nav-font text-md">
       <motion.div
         initial={{ x: -300 }}
         animate={{ x: 0 }}
@@ -49,7 +42,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               transition={{ duration: 1.5 }}
             >
-              <IoMdClose  className=" text-4xl" />
+              <IoMdClose className=" text-4xl" />
             </motion.div>
           ) : (
             <motion.div
@@ -57,7 +50,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               transition={{ duration: 1.5 }}
             >
-              <IoIosMenu  className=" text-4xl" />
+              <IoIosMenu className=" text-4xl" />
             </motion.div>
           )}
         </button>
@@ -106,7 +99,7 @@ const Navbar = () => {
           <img src={line} alt="line" />
         </span>
         {/* <span className="py-3 w-16 h-1 flex items-center justify-center"> */}
-          {/* <div className="w-[9vw] h-[1px] bg-white"></div> */}
+        {/* <div className="w-[9vw] h-[1px] bg-white"></div> */}
         {/* </span> */}
         <Link
           to="footer"
