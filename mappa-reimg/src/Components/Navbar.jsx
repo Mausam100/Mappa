@@ -49,7 +49,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               transition={{ duration: 1.5 }}
             >
-              <IoIosMenu onClick={clickMenu} className=" text-4xl" />
+              <IoIosMenu  className=" text-4xl" />
             </motion.div>
           )}
         </button>

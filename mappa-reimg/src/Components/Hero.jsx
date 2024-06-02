@@ -45,13 +45,14 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.to(tl.current, {
-      scaleX: 1.9,
-      scaleY: 1.9,
+      scaleX: 2,
+      scaleY: 2,
 
       scrollTrigger: {
-        trigger: ".hero",
-        start: "top top",
+        trigger: ".main",
+        start: "top 0",
         end: "bottom top",
+        markers: true,
         scrub: 1,
         pin:true,
       },
@@ -60,7 +61,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="text-white bg-black">
+      <div className="main text-white bg-black">
         <motion.main
           initial={{ x: -2000 }}
           animate={{ x: 0 }}
@@ -74,7 +75,7 @@ const Hero = () => {
           id="home"
           className="h-full w-full relative overflow-hidden"
         >
-          <div>
+          <div className="swiper">
             <Swiper
               ref={tl}
               modules={[Autoplay]}
@@ -131,7 +132,7 @@ const Hero = () => {
 
           <footer
             ref={hide}
-            className="flex w-full h-[40vh] px-6 mt-6 items-center justify-between z-50"
+            className="flex w-full h-[40vh] px-6 mt-0 items-center justify-between z-50"
           >
             <div className="scroll h-7">
               <img src={Scroll} alt="" className=" w-16" />
