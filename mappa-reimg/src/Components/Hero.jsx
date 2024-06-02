@@ -124,7 +124,7 @@ const Hero = () => {
             className="flex w-full h-[40vh] px-6 mt-0 items-center justify-between z-50"
           >
             <div className="scroll h-7">
-              <img src={Scroll} alt="" className=" w-16" />
+              {/* <img src={Scroll} alt="" className=" w-16" /> */}
             </div>
             <div className=" flex items-center gap-4 rounded-xl bg-[#c4c3c339] py-2 px-4 z-50">
               <h3 className="text-center font-medium text-lg">RECRUITING</h3>

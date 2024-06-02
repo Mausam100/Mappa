@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import Logo from "../assets/images/icons/logo.svg";
+=======
+import React, { useState } from "react";
+import Logo from "../assets/brand_assets/logo.svg";
+>>>>>>> 4ac7f6d068814e383f70d6cb32e2a7fba2723d19
 import line from "../assets/images/icons/Line8.png";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -100,6 +105,9 @@ const Navbar = () => {
         <span className="py-3 w-16 h-1">
           <img src={line} alt="line" />
         </span>
+        {/* <span className="py-3 w-16 h-1 flex items-center justify-center"> */}
+          {/* <div className="w-[9vw] h-[1px] bg-white"></div> */}
+        {/* </span> */}
         <Link
           to="footer"
           smooth={true}
