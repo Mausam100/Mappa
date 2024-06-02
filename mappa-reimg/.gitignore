@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+
+/src/assets/videos
+>>>>>>> fe6df6b3d5bbd0ed71d9c6dc3006d362178bf0e7
