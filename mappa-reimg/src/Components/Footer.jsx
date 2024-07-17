@@ -21,7 +21,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <Element name='footer' className="bg-black text-white py-10 px-5">
+    <Element name='footer' className="relative maven w-full h-full bg-black text-white p-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
           <h3 className="text-lg font-semibold mb-2">CONTACT</h3>

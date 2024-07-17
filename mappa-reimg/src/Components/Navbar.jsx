@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav flex p-6 items-center justify-between bg-[#000] nav-font text-md">
+    <nav className="flex p-6 items-center justify-between bg-[#000] nav-font text-md">
       <motion.div
         initial={{ x: -300 }}
         animate={{ x: 0 }}
@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
       <div
         id="navlinks"
-        className={` right-6 z-50 lg:static lg:flex gap-8 transition-all duration-500 ease-in-out ${
+        className={`fixed right-6 z-50 lg:static lg:flex gap-8 transition-all duration-500 ease-in-out ${
           isOpen
             ? "flex flex-col items-center bg-[#006837] p-4 top-16 left-0 w-full"
             : "hidden"
