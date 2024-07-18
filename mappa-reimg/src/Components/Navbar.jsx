@@ -1,132 +1,69 @@
-import React, { useState, useRef } from "react";
-import Logo from "../assets/images/icons/logo.svg";
-import line from "../assets/images/icons/Line8.png";
-import { motion } from "framer-motion";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import React from 'react';
+import {useState} from 'react';
+import logo from '../assets/brand_assets/logo.svg';
+import { IoMenu, IoClose } from 'react-icons/io5';
 
-import { Link } from "react-scroll";
-import { IoIosMenu, IoMdClose } from "react-icons/io";
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useGSAP(() => {
-    gsap.from("#navlinks a,span", {
-      duration: 1,
-      y: -100,
-      opacity: 0,
-      ease: "power3.out",
-      stagger: 0.2,
-    });
-  });
+function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="flex p-6 items-center justify-between bg-[#000] nav-font text-md">
-      <motion.div
-        initial={{ x: -300 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 1.5 }}
-      >
-        <img src={Logo} alt="logo" />
-      </motion.div>
-      <div className="lg:hidden">
-        <button onClick={toggleMenu} className="text-white">
-          {isOpen ? (
-            <motion.div
-              initial={{ x: 300 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 1.5 }}
-            >
-              <IoMdClose className=" text-4xl" />
-            </motion.div>
-          ) : (
-            <motion.div
-              initial={{ x: 300 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 1.5 }}
-            >
-              <IoIosMenu className=" text-4xl" />
-            </motion.div>
-          )}
-        </button>
-      </div>
-      <div
-        id="navlinks"
-        className={`fixed right-6 z-50 lg:static lg:flex gap-8 transition-all duration-500 ease-in-out ${
-          isOpen
-            ? "flex flex-col items-center bg-[#006837] p-4 top-16 left-0 w-full"
-            : "hidden"
-        } lg:flex lg:gap-8 lg:bg-transparent lg:p-0`}
-      >
-        <Link
-          className="sm:bg-[#006837] px-2 rounded-sm cursor-pointer"
-          to="home"
-          onClick={toggleMenu}
-        >
-          HOME
-        </Link>
-        <Link
-          to="work"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
-          onClick={toggleMenu}
-        >
-          NEW WORK
-        </Link>
-        <Link
-          to="news"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
-          onClick={toggleMenu}
-        >
-          NEWS
-        </Link>
-        <Link
-          to="#"
-          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
-          onClick={toggleMenu}
-        >
-          MERCH
-        </Link>
-        <span className="py-3 w-16 h-1">
-          <img src={line} alt="line" />
-        </span>
-        {/* <span className="py-3 w-16 h-1 flex items-center justify-center"> */}
-        {/* <div className="w-[9vw] h-[1px] bg-white"></div> */}
-        {/* </span> */}
-        <Link
-          to="footer"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
-          onClick={toggleMenu}
-        >
-          ABOUT
-        </Link>
-        <Link
-          href="#"
-          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
-          onClick={toggleMenu}
-        >
-          WORKS
-        </Link>
-        <Link
-          href="#"
-          className="cursor-pointer relative hover:after:scale-x-100 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 after:ease-in-out"
-          onClick={toggleMenu}
-        >
-          CAREERS
-        </Link>
-      </div>
-    </nav>
-  );
-};
+    <header className="flex items-center justify-between px-5 ibm-normal">
+      <img src={logo} alt="logo" className="w-28 h-auto" />
 
-export default Navbar;
+      <nav className="flex items-center gap-4 p-4 bg-black text-white">
+        {['HOME', 'ABOUT', 'WORKS', 'CONTACT'].map((link) => (
+          <a
+            key={link}
+            href={`/${link.toLowerCase()}`}
+            className="hidden relative md:inline-block group hover:text-green-600 hover:ease-in-out"
+          >
+            <span className="absolute left-0 transform transition-transform duration-300 group-hover:-translate-x-2 hover:ease-in-out">
+              [
+            </span>
+            <span className="relative mx-2">{link}</span>
+            <span className="absolute right-0 transform transition-transform duration-300 group-hover:translate-x-2 hover:ease-in-out">
+              ]
+            </span>
+          </a>
+        ))}
+        <a href="#" className="inline-block md:hidden text-2xl" onClick={toggleMenu}>
+          <IoMenu />
+          <div></div>
+        </a>
+      </nav>
+
+      {/* Overlay Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-1/2 bg-black text-white p-5 transform z-50 transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } md:hidden`}
+      >
+        <div className="flex justify-between items-center mb-5">
+          <button onClick={toggleMenu} className="text-3xl">
+            <IoClose />
+          </button>
+        </div>
+        <nav className="flex flex-col gap-4">
+          {['HOME', 'ABOUT', 'WORKS', 'CONTACT'].map((link) => (
+            <a
+              key={link}
+              href={`/${link.toLowerCase()}`}
+              className="block text-2xl hover:text-green-600"
+              onClick={toggleMenu} // Close menu on link click
+            >
+              {link}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+
+    </header>
+  );
+}
+
+export default NavBar;
