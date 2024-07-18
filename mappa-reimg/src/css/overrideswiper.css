@@ -1,0 +1,14 @@
+/* Ensure higher specificity and use !important to override Swiper default styles */
+.mySwiper .swiper-slide {
+    opacity: 1 !important; /* Override default opacity */
+  }
+  
+  .mySwiper .swiper-slide-active {
+    opacity: 1 !important; /* Active slide opacity */
+  }
+  
+  .mySwiper .swiper-slide-prev,
+  .mySwiper .swiper-slide-next {
+    opacity: 0.5 !important; /* Previous and next slides opacity */
+  }
+  

@@ -1,0 +1,11 @@
+work.jsx
+
+<div className="">
+              <motion.img
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+                src={GroupText}
+                alt=""
+                className="w-28"
+              />
+            </div>
