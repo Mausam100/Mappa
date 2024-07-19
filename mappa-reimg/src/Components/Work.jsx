@@ -130,7 +130,7 @@ const Work = () => {
 
   return (
     <>
-      <Element name="section2" className="w-full h-full text-white">
+      {/* <Element name="section2" className="w-full h-full text-white">
         <section
           id="work"
           className="relative w-full h-full flex-col items-center justify-center bg-black text-white rounded-t-3xl"
@@ -141,14 +141,14 @@ const Work = () => {
               toggleOverlay={() => toggleOverlay(null)}
             />
           )}
-          <div className="relative mx-24 pt-24 overflow-hidden rounded-md">
-            <h1 className="text-white text-[8vw] absolute top-16 left-0 -z-50">
-              NEW WORKS
-            </h1>
+          <div className="relative mx-24 pt-20 overflow-hidden rounded-md">
             <div
               className="w-full overflow-y-hidden overflow-x-scroll scrollbarnone flex"
               ref={sliderRef}
-              style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
+              style={{
+                scrollSnapType: "x mandatory",
+                scrollBehavior: "smooth",
+              }}
             >
               {cardData.map((card, index) => (
                 <motion.div
@@ -159,9 +159,13 @@ const Work = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                  style={{ scrollSnapAlign: 'start' }}
+                  style={{ scrollSnapAlign: "start" }}
                 >
-                  <Cards img={card.image} title={card.title} top={index % 2 === 0} />
+                  <Cards
+                    img={card.image}
+                    title={card.title}
+                    top={index % 2 === 0}
+                  />
                 </motion.div>
               ))}
               <motion.div
@@ -173,7 +177,69 @@ const Work = () => {
               >
                 <div>
                   <div className="flex gap-3">
-                    <h1 className="font-semibold text-lg uppercase">Explore All</h1>
+                    <h1 className="font-semibold text-lg uppercase">
+                      Explore All
+                    </h1>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+          <img src={Scroll} alt="" className="p-6 w-28" />
+        </section>
+      </Element> */}
+
+      <Element name="section2" className="w-full h-full text-white">
+        <section
+          id="work"
+          className="relative w-full h-full flex-col items-center justify-center bg-black text-white rounded-t-3xl"
+        >
+          {showOverlay && (
+            <Overlayer
+              card={selectedCard}
+              toggleOverlay={() => toggleOverlay(null)}
+            />
+          )}
+          <div className="relative mx-4 pt-20 overflow-hidden rounded-md">
+            <div
+              className="w-full overflow-x-scroll scrollbarnone flex"
+              ref={sliderRef}
+              style={{
+                scrollSnapType: "x mandatory",
+                scrollBehavior: "smooth",
+              }}
+            >
+              {cardData.map((card, index) => (
+                <motion.div
+                  key={index}
+                  onClick={() => toggleOverlay(card)}
+                  className="flex-none w-full md:w-3/12 p-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  style={{ scrollSnapAlign: "start", minWidth: "320px" }}
+                >
+                  <Cards
+                    img={card.image}
+                    title={card.title}
+                    top={index % 2 === 0}
+                  />
+                </motion.div>
+              ))}
+              <motion.div
+                className="flex-none w-full md:w-3/12 p-4 h-[70vh] cursor-pointer flex items-center justify-center hover:border-2 border-[#006837] rounded-md"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                style={{ minWidth: "320px", scrollSnapAlign: "start" }}
+              >
+                <div>
+                  <div className="flex gap-3">
+                    <h1 className="font-semibold text-lg uppercase">
+                      Explore All
+                    </h1>
                   </div>
                 </div>
               </motion.div>
