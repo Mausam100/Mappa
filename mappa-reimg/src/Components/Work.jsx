@@ -53,8 +53,10 @@ const Work = () => {
   }, []);
 
   return (
+
     <>
       <Element name="section2" className="w-full h-full text-white">
+        
         <section
           id="work"
           className="relative w-full h-full flex-col items-center justify-center bg-black text-white rounded-t-3xl"
