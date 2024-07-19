@@ -1,9 +1,12 @@
 import React from "react";
 import Arrow from "../assets/images/icons/rightArrow.png";
+import MouseFollower from "./MouseFollower";
 
 function Card({title, img, top}) {
+  
   return (
     <div className="">
+      {/* <MouseFollower/> */}
       {top && (
         <div className=" flex items-baseline gap-3 ">
           <h1 className=" font-semibold text-[1vw] text-lg uppercase">{title}</h1>
