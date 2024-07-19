@@ -73,6 +73,15 @@
   border-radius: 20px;
 }
 
+.scrollbarnone{
+  scrollbar-width: 0;
+}
+
+.scrollbarnone::-webkit-scrollbar{
+  display: none;
+  scrollbar-width: none;
+}
+
 /* styles.css or your main CSS file */
 .swiper-slide-prev, .swiper-slide-next {
     transform: scale(0.8); /* Scale down the side slides */
