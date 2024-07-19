@@ -9,7 +9,7 @@ function Card({title, img, top}) {
       {/* <MouseFollower/> */}
       {top && (
         <div className=" flex items-baseline gap-3 ">
-          <h1 className=" font-semibold text-[1vw] text-lg uppercase">{title}</h1>
+          <h1 className=" font-semibold text-sm text-nowrap uppercase">{title}</h1>
           <img src={Arrow} alt="" className=" w-10 " />
         </div>
       )}
@@ -19,7 +19,7 @@ function Card({title, img, top}) {
       
       {!top && (
         <div className=" flex items-top gap-3 ">
-          <h1 className=" font-semibold text-[1vw] text-lg uppercase">{title}</h1>
+          <h1 className=" font-semibold text-sm text-nowrap uppercase">{title}</h1>
           <img src={Arrow} alt="" className=" w-10 pt-1 " />
         </div>
       )}

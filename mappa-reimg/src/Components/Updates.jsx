@@ -1,8 +1,62 @@
-import React from "react";
+import React, {useState} from "react";
 import { CgMenuOreos } from "react-icons/cg";
 import { RiInboxArchiveLine } from "react-icons/ri";
+import cardData from "../constant/CardDetails";
+
+const updatesData = [
+  {
+    date: "2024.04.01",
+    title: "新経営体制に関するお知らせ",
+    details:
+      "株式会社MAPPA（代表取締役社長：大塚 学、本社：東京都杉並区）は、2024年4月より下記の通り新経営体制となりましたので、お知らせいたします。",
+    link: false,
+    tag: "CORPORATE",
+  },
+  {
+    date: "2024.03.24",
+    title: "『ぶっちぎり?!』クライマックスPV公開！",
+    details: "https://twitter.com/bucchigiri_PR/status/1771731709777858974",
+    link: true,
+    tag: "INFO",
+  },
+  {
+    date: "2024.03.23",
+    title: "『忘却バッテリー』放送直前ビジュアル公開！",
+    details: "Detailed news content for section 3.",
+    link: false,
+    tag: "INFO",
+  },
+  {
+    date: "2024.03.22",
+    title: "『全修。』制作決定！ティザービジュアル＆PV公開！",
+    details: "Detailed news content for section 4.",
+    link: false,
+    tag: "INFO",
+  },
+  {
+    date: "2023.12.29",
+    title: "『呪術廻戦』続編「死滅回游」制作決定！",
+    details: "Detailed news content for section 5.",
+    link: false,
+    tag: "INFO",
+  },
+];
 
 function Updates() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const handleHeadlineClick = (index) => {
+    const newsItem = newsData[index];
+    if (newsItem.link) {
+      window.open(newsItem.details, "_blank");
+    } else {
+      setExpandedIndex(index);
+    }
+  };
+
+  const handleClosePopup = () => {
+    setExpandedIndex(null);
+  };
+
   return (
     <>
       <section

@@ -146,7 +146,7 @@ const Work = () => {
               NEW WORKS
             </h1>
             <div
-              className="w-full overflow-hidden flex"
+              className="w-full overflow-y-hidden overflow-x-scroll scrollbarnone flex"
               ref={sliderRef}
               style={{ scrollSnapType: 'x mandatory', scrollBehavior: 'smooth' }}
             >
@@ -154,7 +154,7 @@ const Work = () => {
                 <motion.div
                   key={index}
                   onClick={() => toggleOverlay(card)}
-                  className="flex-none w-[25%] p-4 slide"
+                  className="flex-none w-3/12 p-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
