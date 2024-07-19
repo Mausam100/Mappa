@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
 import Updates from "./Components/Updates";
+import ProfileVision from "./Components/ProfileVision";
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
           <Hero />
         </div>
         <div className="w-full h-[100vh] bg-transparent"></div>
-
+        
+        <ProfileVision />
         <Work />
         <News />
         <Updates />

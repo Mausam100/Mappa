@@ -68,4 +68,3 @@ const MouseFollower = ({ hoverText }) => {
 };
 
 export default MouseFollower;
-
