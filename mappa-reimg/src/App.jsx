@@ -5,6 +5,7 @@ import News from "./Components/News";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
+import Updates from "./Components/Updates";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -18,8 +19,9 @@ function App() {
         <div className="w-full h-[100vh] bg-transparent"></div>
 
         <Work />
-
         <News />
+        <Updates />
+
         <Footer />
       </div>
     </main>
