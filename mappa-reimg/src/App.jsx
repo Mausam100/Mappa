@@ -5,8 +5,10 @@ import News from "./Components/News";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
+import MouseFollower from "./Components/MouseFollower";
 
 function App() {
+  
   const locomotiveScroll = new LocomotiveScroll();
   return (
     <main className="app  text-white bg-black w-full overflow-hidden">
