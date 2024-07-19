@@ -78,7 +78,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import GroupText from "../assets/images/icons/Group.svg";
 import Scroll from "../assets/images/icons/Scroll.png";
-import Arrow from "../assets/images/icons/rightArrow.png";
 import Cards from "./Card";
 import Overlayer from "./Overlayer";
 import cardData from "/src/constant/CardDetails.js";
@@ -88,9 +87,6 @@ import { Element } from "react-scroll";
 const Work = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const sliderRef = useRef(null);
 
   const toggleOverlay = (card) => {
@@ -98,65 +94,39 @@ const Work = () => {
     setShowOverlay(!showOverlay);
   };
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
+  const scrollToSlide = (direction) => {
+    const slider = sliderRef.current;
+    const slideWidth = slider.querySelector(".slide").offsetWidth;
+    const scrollAmount = direction === "left" ? -slideWidth : slideWidth;
+    slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
+  const handleWheel = (e) => {
+    if (e.deltaY > 0) {
+      scrollToSlide("right");
+    } else {
+      scrollToSlide("left");
+    }
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 2; //scroll-fast
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 2; //scroll-fast
-    sliderRef.current.scrollLeft = scrollLeft - walk;
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowLeft") {
+      scrollToSlide("left");
+    } else if (e.key === "ArrowRight") {
+      scrollToSlide("right");
+    }
   };
 
   useEffect(() => {
     const slider = sliderRef.current;
-    slider.addEventListener("mousedown", handleMouseDown);
-    slider.addEventListener("mouseleave", handleMouseLeave);
-    slider.addEventListener("mouseup", handleMouseUp);
-    slider.addEventListener("mousemove", handleMouseMove);
-    slider.addEventListener("touchstart", handleTouchStart);
-    slider.addEventListener("touchend", handleTouchEnd);
-    slider.addEventListener("touchmove", handleTouchMove);
+    slider.addEventListener("wheel", handleWheel);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      slider.removeEventListener("mousedown", handleMouseDown);
-      slider.removeEventListener("mouseleave", handleMouseLeave);
-      slider.removeEventListener("mouseup", handleMouseUp);
-      slider.removeEventListener("mousemove", handleMouseMove);
-      slider.removeEventListener("touchstart", handleTouchStart);
-      slider.removeEventListener("touchend", handleTouchEnd);
-      slider.removeEventListener("touchmove", handleTouchMove);
+      slider.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isDragging, startX, scrollLeft]);
+  }, []);
 
   return (
     <>
@@ -184,7 +154,7 @@ const Work = () => {
                 <motion.div
                   key={index}
                   onClick={() => toggleOverlay(card)}
-                  className="flex-none w-[25%] p-4"
+                  className="flex-none w-[25%] p-4 slide"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -204,7 +174,6 @@ const Work = () => {
                 <div>
                   <div className="flex gap-3">
                     <h1 className="font-semibold text-lg uppercase">Explore All</h1>
-                    <img src={Arrow} alt="" className="w-6" />
                   </div>
                 </div>
               </motion.div>
