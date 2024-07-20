@@ -22,7 +22,7 @@ function App() {
         
         <ProfileVision />
         <Work />
-        <News />
+        {/* <News /> */}
         <Updates />
 
         <Footer />
