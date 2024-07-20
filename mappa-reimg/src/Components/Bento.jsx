@@ -5,8 +5,8 @@ function Bento() {
   return (
     <>
       <div className="flex flex-1 flex-col items-center justify-center lg:flex-row px-20 py-28 relative maven w-screen h-full bg-black text-white">
-        <div className="max-w-md h-full rounded-md p-6 relative maven flex flex-col gap-5 items-stretch">
-          <div className="flex flex-row flex-nowrap justify-start gap-10 items-center h-full">
+        <div className="border-2 border-gray-600 max-w-sm sm:max-w-md h-full rounded-md p-6 relative maven flex flex-col gap-5 sm:gap-5 ">
+          <div className="flex flex-col sm:flex-row justify-start gap-5 sm:gap-10 items-center h-full">
             <div className="top-left-content">
               <div className="text-gray-400 text-sm mb-2">CATEGORY</div>
               <h2 className="text-2xl font-bold mb-4">PACKAGE</h2>
@@ -16,8 +16,8 @@ function Bento() {
               <p className="text-sm text-gray-400 mb-4">
                 とんでもスキルで異世界放浪メシ Blu-ray 第1巻
               </p>
-              <button className="bg-white text-black py-2 px-4 rounded-md mb-6">
-                <span className="text-xs font-bold text-nowrap">
+              <button className="bg-white text-black py-1 px-3 sm:py-2 sm:px-4 rounded-md mb-6">
+                <span className="text-md sm:text-xs font-bold text-nowrap">
                   MAPPA ONLINE SHOP にて販売中
                 </span>
               </button>
