@@ -52,7 +52,7 @@ function Updates() {
             className="bg-[#e6e6e6] text-black w-full h-16 rounded-t-md flex flex-row justify-between items-center px-5 text-xl maven"
           >
             <h3 className="uppercase">updates</h3>
-            <CgMenuOreos className="rotate-90" />
+            <CgMenuOreos className="rotate-90 text-3xl " />
           </div>
           {updatesData.map((data, index) => (
             <div className="flex flex-col cursor-pointer" onClick={() => handleHeadlineClick(index)} key={index}>

@@ -55,7 +55,7 @@ const News = () => {
         {newsData.map((news, index) => (
           <div
             key={index}
-            className={`flex flex-col uppercase items-center justify-center border-t-[1px] px-6 cursor-pointer transition-all duration-300 h-16 overflow-hidden`}
+            className="flex flex-col uppercase items-center justify-center border-t-[1px] px-6 cursor-pointer transition-all duration-300 h-16 overflow-hidden"
             onClick={() => handleHeadlineClick(index)}
           >
             <div className="flex w-full justify-between items-center">
