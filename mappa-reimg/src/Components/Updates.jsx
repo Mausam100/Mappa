@@ -55,17 +55,17 @@ function Updates() {
             <CgMenuOreos className="rotate-90 text-3xl " />
           </div>
           {updatesData.map((data, index) => (
-            <div className="flex flex-col cursor-pointer" onClick={() => handleHeadlineClick(index)} key={index}>
+            <div className="flex flex-col cursor-pointer w-full h-auto py-2" onClick={() => handleHeadlineClick(index)} key={index}>
               <div className="px-5 text-md w-full h-fit py-2 flex flex-row justify-between gap-20 items-center">
-                <span className="flex flex-col md:flex-row gap-10">
-                  <span id="updates_date" className="uppercase">
+                <span className="flex flex-col md:flex-row gap-5">
+                  <span id="updates_date" className="uppercase text-green-600">
                     {data.date}
                   </span>
                   <span id="updates_title">
                     {data.title}
                   </span>
                 </span>
-                <span id="updates_catagory" className="uppercase">
+                <span id="updates_catagory" className="uppercase text-green-600">
                   {data.tag}
                 </span>
               </div>
@@ -73,9 +73,9 @@ function Updates() {
           ))}
           <div
             id="archives"
-            className="bg-[#e6e6e6] self-end text-black flex text-nowrap flex-row px-6 py-1 rounded-full items-center justify-between gap-5"
+            className="bg-[#e6e6e6] self-end text-black flex text-nowrap flex-row px-6 py-1 rounded-full items-center justify-between gap-5 my-10 cursor-pointer"
           >
-            <h3 className="lowercase">archives</h3>
+            <h3 className="lowercase text-lg">archives</h3>
             <RiInboxArchiveLine />
           </div>
           {expandedIndex !== null && (

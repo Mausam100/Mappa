@@ -7,8 +7,7 @@ import Footer from "./Components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
 import Updates from "./Components/Updates";
 import ProfileVision from "./Components/ProfileVision";
-import BentoGrid from "./Components/BentoGrid";
-import BentoGridItem from "./Components/BentoGridItem";
+import Bento from "./Components/Bento";
 
 function App() {
   useEffect(() => {
@@ -30,21 +29,7 @@ function App() {
         <ProfileVision />
         <Work />
         <Updates />
-        <BentoGrid>
-          <BentoGridItem
-            title="Item 1"
-            description="This is the description for item 1."
-            header={<div>Header 1</div>}
-            icon={<div>Icon 1</div>}
-          />
-          <BentoGridItem
-            title="Item 2"
-            description="This is the description for item 2."
-            header={<div>Header 2</div>}
-            icon={<div>Icon 2</div>}
-          />
-          
-        </BentoGrid>
+        <Bento />
         <Footer />
       </div>
     </main>
