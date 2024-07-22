@@ -34,8 +34,8 @@ const Hero = () => {
         
         animate={{ x: 0 }}
         transition={{
-          ease: "easeIn",
-          duration: 1.5,
+          ease: "easeInOut",
+          duration: 0.5,
           type: "spring",
           stiffness: 50,
           delay: 1.5,
