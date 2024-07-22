@@ -6,7 +6,7 @@
   grid-auto-flow: row;
   grid-template-areas:
     "first first second"
-    "fourth thrid second"
+    "fourth third second"
     "fourth fifth fifth";
   width: 50%;
   height: 50%;
@@ -20,8 +20,8 @@
   grid-area: second;
 }
 
-.thrid {
-  grid-area: thrid;
+.third {
+  grid-area: third;
 }
 
 .fourth {

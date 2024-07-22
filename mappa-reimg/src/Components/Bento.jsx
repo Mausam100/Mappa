@@ -1,11 +1,17 @@
 import React from "react";
-import './bento.css';
+import "./bento.css";
+import { AiOutlineShop } from "react-icons/ai";
 
 function Bento() {
   return (
     <>
       <div className="flex flex-1 flex-col items-center justify-center lg:flex-row px-20 py-28 relative maven w-screen h-full bg-black text-white">
-        <div className="border-2 border-gray-600 max-w-sm sm:max-w-md h-full rounded-md p-6 relative maven flex flex-col gap-5 sm:gap-5 ">
+
+        <div className="border-2 rounded-2xl border-gray-600 max-w-sm sm:max-w-md h-full p-6 relative maven flex flex-col gap-5 sm:gap-5 ">
+        <h1 className="absolute text-9xl -top-[18%] left-[0%] text-shadow-stroke text-transparent">
+          GOODS
+        </h1>
+
           <div className="flex flex-col sm:flex-row justify-start gap-5 sm:gap-10 items-center h-full">
             <div className="top-left-content">
               <div className="text-gray-400 text-sm mb-2">CATEGORY</div>
@@ -47,12 +53,86 @@ function Bento() {
           className="flex p-6 relative maven rounded-md my-auto"
         >
           {/*  */}
-          <div id="grid-box" className="container">
-            <div className="first bg-blue-400">hello</div>
-            <div className="second bg-pink-400">second</div>
-            <div className="thrid bg-red-500">thuird</div>
-            <div className="fourth bg-amber-500">dourth</div>
-            <div className="fifth bg-violet-500">fifth</div>
+          <div id="grid-box" className="container gap-4">
+            <div className="first border-blue-400 border-2 p-5 flex rounded-2xl w-full h-full">
+              <div className="card-content flex flex-col justify-between w-full h-full">
+                <div className="flex flex-col justify-center items-start">
+                  <h6 className="uppercase">catagory</h6>
+                  <h2 className="uppercase">PACKAGE</h2>
+                  <h4>TITLE : Jujutsu Kaisen</h4>
+                </div>
+                <p>link here</p>
+              </div>
+              <div className="card-img">
+                <img
+                  src="/src/assets/images/products/jujutsu_kaisen.png"
+                  className="w-full h-full object-cover overflow-visible"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="second border-2 border-pink-400 p-5 flex flex-col rounded-2xl w-full h-full gap-3">
+              <div className="card-content flex flex-col justify-between w-full h-full">
+                <div className="flex flex-col justify-center items-start">
+                  <h6 className="uppercase">catagory</h6>
+                  <h2 className="uppercase">PACKAGE</h2>
+                  <h4>TITLE : Jujutsu Kaisen</h4>
+                </div>
+                <p>link here</p>
+              </div>
+              <div className="card-img flex justify-center items-center">
+                <img
+                  src="/src/assets/images/products/jujutsu_kaisen.png"
+                  className="w-3/4 h-full object-cover overflow-visible"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="third">
+              <button className="border-2 border-[#006837] rounded-2xl w-full h-full flex flex-col justify-center items-center gap-4">
+                <div>
+                  <h6 className="uppercase text-sm">visit</h6>
+                  <h1 className="uppercase text-lg">mappa online shop</h1>
+                </div>
+                <span className="text-4xl">
+                  <AiOutlineShop />
+                </span>
+              </button>
+            </div>
+            <div className="fourth border-2 border-amber-500 p-5 flex flex-col rounded-2xl w-full h-full gap-3">
+              <div className="card-content flex flex-col justify-between w-full h-full">
+                <div className="flex flex-col justify-center items-start">
+                  <h6 className="uppercase">catagory</h6>
+                  <h2 className="uppercase">PACKAGE</h2>
+                  <h4>TITLE : Jujutsu Kaisen</h4>
+                </div>
+                <p>link here</p>
+              </div>
+              <div className="card-img flex items-center justify-center">
+                <img
+                  src="/src/assets/images/products/jujutsu_kaisen.png"
+                  className="w-3/4 h-full object-cover overflow-visible"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="fifth border-2 border-violet-500 p-5 flex rounded-2xl w-full h-full">
+              <div className="card-content flex flex-col justify-between w-full h-full">
+                <div className="flex flex-col justify-center items-start">
+                  <h6 className="uppercase">catagory</h6>
+                  <h2 className="uppercase">PACKAGE</h2>
+                  <h4>TITLE : Jujutsu Kaisen</h4>
+                </div>
+                <p>link here</p>
+              </div>
+              <div className="card-img">
+                <img
+                  src="/src/assets/images/products/jujutsu_kaisen.png"
+                  className="w-full h-full object-cover overflow-visible"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
           {/*  */}
         </div>
