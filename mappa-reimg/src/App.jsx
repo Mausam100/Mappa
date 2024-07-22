@@ -8,6 +8,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Updates from "./Components/Updates";
 import ProfileVision from "./Components/ProfileVision";
 import Bento from "./Components/Bento";
+import Top from "./Components/top";
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
         </div>
         <div className="w-full h-[100vh] bg-transparent"></div> 
         <ProfileVision />
+        <Top/>
         <Work />
         <Updates />
         <Bento />

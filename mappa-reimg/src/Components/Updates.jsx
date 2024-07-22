@@ -46,22 +46,22 @@ function Updates() {
         id="updates"
         className="relative maven flex items-center pt-32 justify-center w-full h-full bg-black text-white"
       >
-        <h1 className="absolute text-9xl md:-top-[-1%] -top-[2%] left-[10%] text-shadow-stroke text-transparent">
-          News
+        <h1 className="absolute text-9xl md:-top-[-1%] -top-[2%] left-[10%] text-shadow-stroke text-transparent ibm-normal">
+          NEWS
         </h1>
         <div className="w-2/3 h-full flex flex-col items-center">
           <div
             id="updates_title"
             className="bg-[#e6e6e6] text-black w-full h-16 rounded-t-md flex flex-row justify-between items-center px-5 text-xl maven"
           >
-            <h3 className="uppercase">updates</h3>
+            <h3 className="uppercase ibm-normal">updates</h3>
             <CgMenuOreos className="rotate-90 text-3xl " />
           </div>
           {updatesData.map((data, index) => (
             <div className="flex flex-col cursor-pointer w-full h-auto py-2" onClick={() => handleHeadlineClick(index)} key={index}>
               <div className="px-5 text-md w-full h-fit py-2 flex flex-row justify-between gap-20 items-center">
                 <span className="flex flex-col md:flex-row gap-5">
-                  <span id="updates_date" className="uppercase text-green-600">
+                  <span id="updates_date" className="uppercase text-green-600 ibm-normal">
                     {data.date}
                   </span>
                   <span id="updates_title">
@@ -78,7 +78,7 @@ function Updates() {
             id="archives"
             className="bg-[#e6e6e6] self-end text-black flex text-nowrap flex-row px-6 py-1 rounded-full items-center justify-between gap-5 my-10 cursor-pointer"
           >
-            <h3 className="lowercase text-lg">archives</h3>
+            <h3 className="lowercase text-lg ">archives</h3>
             <RiInboxArchiveLine />
           </div>
           {expandedIndex !== null && (

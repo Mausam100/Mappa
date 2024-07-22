@@ -61,7 +61,7 @@ const Work = () => {
           id="work"
           className="relative md:pt-10 pt-20 w-full h-full flex-col items-center justify-center bg-black text-white"
         >
-          <h1 className="absolute text-9xl md:-top-[-4%] -top-[2%] left-[5%] text-shadow-stroke text-transparent">
+          <h1 className="uppercase absolute text-9xl md:-top-[-4%] -top-[2%] left-[5%] text-shadow-stroke text-transparent ibm-normal ">
           New Works
         </h1>
           {showOverlay && (

@@ -5,18 +5,18 @@ import { AiOutlineShop } from "react-icons/ai";
 function Bento() {
   return (
     <>
-      <div className="flex flex-1 flex-col items-center justify-center lg:flex-row px-20 py-28 relative maven w-screen h-full bg-black text-white">
+      <div className="flex flex-1 flex-col items-center justify-center lg:flex-row px-20 py-28 relative w-screen h-full bg-black text-white">
 
-        <h1 className="absolute text-9xl md:-top-[-4%] -top-[2%] left-[10%] text-shadow-stroke text-transparent">
+        <h1 className="absolute text-9xl md:-top-[-4%] -top-[2%] left-[10%] text-shadow-stroke text-transparent ibm-normal">
           GOODS
         </h1>
-        <div className="border-2 rounded-2xl border-[#1a1a1a] bg-[#0d0d0d] max-w-sm sm:max-w-md h-full p-6 relative maven flex flex-col gap-5 sm:gap-5 ">
+        <div className="border-2 rounded-2xl border-[#1a1a1a] bg-[#0d0d0d] max-w-sm sm:max-w-md h-full p-6 relative ibm-normal flex flex-col gap-5 sm:gap-5 transition-all duration-500 hover:bg-[#006837] ease-in-out">
 
           <div className=" flex flex-col sm:flex-row justify-start gap-5 sm:gap-10 items-center h-full">
             <div className="top-left-content">
               <div className="text-gray-400 text-sm mb-2">CATEGORY</div>
               <h2 className="text-2xl font-bold mb-4">PACKAGE</h2>
-              <h3 className="text-sm text-wrap font-bold mb-2">
+              <h3 className="text-sm text-wrap font-normal mb-2">
                 TITLE: CAMPFIRE COOKING IN ANOTHER WORLD WITH MY ABSURD SKILL
               </h3>
               <p className="text-sm text-gray-400 mb-4">
@@ -54,11 +54,11 @@ function Bento() {
         >
           {/*  */}
           <div id="grid-box" className="container gap-4">
-            <div className="first border-[#1a1a1a] bg-[#0d0d0d] border-2 p-5 flex rounded-2xl w-full h-full">
+            <div className="first border-[#1a1a1a] bg-[#0d0d0d] border-2 p-5 flex rounded-2xl w-full h-full transition-all duration-500 hover:bg-[#006837] ease-in-out ibm-normal">
               <div className="card-content flex flex-col justify-between w-full h-full">
                 <div className="flex flex-col justify-center items-start">
-                  <h6 className="uppercase">catagory</h6>
-                  <h2 className="uppercase">PACKAGE</h2>
+                  <h6 className="text-gray-400 text-xs uppercase">category</h6>
+                  <h2 className=" text-lg font-bold uppercase">PACKAGE</h2>
                   <h4>TITLE : Jujutsu Kaisen</h4>
                 </div>
                 <p>link here</p>
@@ -71,7 +71,7 @@ function Bento() {
                 />
               </div>
             </div>
-            <div className="second border-2 border-[#1a1a1a] bg-[#0d0d0d] p-5 flex flex-col rounded-2xl w-full h-full gap-3">
+            <div className="second border-2 border-[#1a1a1a] bg-[#0d0d0d] p-5 flex flex-col rounded-2xl w-full h-full gap-3 transition-all duration-500 hover:bg-[#006837] ease-in-out ibm-normal">
               <div className="card-content flex flex-col justify-between w-full h-full">
                 <div className="flex flex-col justify-center items-start">
                 <img
@@ -79,7 +79,7 @@ function Bento() {
                   className=" w-full h-full object-cover overflow-visible"
                   alt=""
                 />
-                  <h6 className="uppercase">catagory</h6>
+                  <h6 className="text-gray-400 text-xs uppercase">category</h6>
                   <h2 className="uppercase">PACKAGE</h2>
                   <h4>TITLE :</h4>
                 </div>
@@ -89,7 +89,7 @@ function Bento() {
               </div>
             </div>
             <div className="third">
-              <button className="border-2 border-none bg-[#006837] rounded-2xl w-full h-full flex flex-col justify-center items-center gap-4">
+              <button className="border-2 border-none bg-[#006837] rounded-2xl w-full h-full flex flex-col justify-center items-center gap-4 ibm-normal">
                 <div>
                   <h6 className="uppercase text-sm">visit</h6>
                   <h1 className="uppercase text-lg">mappa online shop</h1>
@@ -99,7 +99,7 @@ function Bento() {
                 </span>
               </button>
             </div>
-            <div className="fourth border-2 border-[#1a1a1a] bg-[#0d0d0d] p-5 flex flex-col rounded-2xl w-full h-full gap-3">
+            <div className="fourth border-2 border-[#1a1a1a] bg-[#0d0d0d] p-5 flex flex-col rounded-2xl w-full h-full gap-3 transition-all duration-500 hover:bg-[#006837] ease-in-out ibm-normal">
               <div className="card-content flex flex-col justify-between w-full h-full">
                 <img
                   src="/src/assets/images/products/campfire-cooking2.png"
@@ -107,7 +107,7 @@ function Bento() {
                   alt=""
                 />
                 <div className="flex flex-col justify-center items-start">
-                  <h6 className="uppercase">catagory</h6>
+                  <h6 className="text-gray-400 text-xs uppercase">category</h6>
                   <h2 className="uppercase">PACKAGE</h2>
                   <h4>TITLE : Camfire Cooking</h4>
                 </div>
@@ -116,10 +116,10 @@ function Bento() {
               <div className="card-img flex items-center justify-center">
               </div>
             </div>
-            <div className="fifth border-2 border-[#1a1a1a] bg-[#0d0d0d] p-5 flex rounded-2xl w-full h-full">
+            <div className="fifth border-2 border-[#1a1a1a] bg-[#0d0d0d] p-5 flex rounded-2xl w-full h-full transition-all duration-500 hover:bg-[#006837] ease-in-out ibm-normal">
               <div className="card-content flex flex-col justify-between w-full h-full">
                 <div className="flex flex-col justify-center items-start">
-                  <h6 className="uppercase">catagory</h6>
+                  <h6 className="text-gray-400 text-sm uppercase">category</h6>
                   <h2 className="uppercase">PACKAGE</h2>
                   <h4>TITLE : Jujutsu Kaisen</h4>
                 </div>
