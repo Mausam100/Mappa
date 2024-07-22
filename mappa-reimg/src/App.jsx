@@ -28,8 +28,8 @@ function App() {
         </div>
         <div className="w-full h-[100vh] bg-transparent"></div> 
         <ProfileVision />
-        <Top/>
         <Work />
+        <Top/>
         <Updates />
         <Bento />
         <Footer />
