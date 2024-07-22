@@ -11,7 +11,7 @@ const updatesData = [
 ];
 
 const Popup = ({ news, onClose }) => (
-  <div className="fixed w-3/4 h-3/4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inset-0 flex items-center justify-center bg-black z-550 border-2 rounded-md border-zinc-700">
+  <div className="fixed w-3/4 h-3/4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inset-0 flex items-center justify-center bg-black z-50 border-2 rounded-md border-zinc-700">
     <div className="p-10 w-full h-full overflow-x-hidden overflow-y-scroll relative flex flex-col items-center">
       <button className="absolute top-2 right-4 text-white text-xl" onClick={onClose}>✖</button>
       <div className='flex flex-row items-center justify-between gap-6'>
