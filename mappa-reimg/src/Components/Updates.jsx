@@ -44,8 +44,11 @@ function Updates() {
     <>
       <section
         id="updates"
-        className="relative maven flex items-center justify-center w-full h-full bg-black text-white"
+        className="relative maven flex items-center pt-32 justify-center w-full h-full bg-black text-white"
       >
+        <h1 className="absolute text-9xl md:-top-[-1%] -top-[2%] left-[10%] text-shadow-stroke text-transparent">
+          News
+        </h1>
         <div className="w-2/3 h-full flex flex-col items-center">
           <div
             id="updates_title"

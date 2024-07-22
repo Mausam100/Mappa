@@ -59,8 +59,11 @@ const Work = () => {
         
         <section
           id="work"
-          className="relative w-full h-full flex-col items-center justify-center bg-black text-white"
+          className="relative md:pt-10 pt-20 w-full h-full flex-col items-center justify-center bg-black text-white"
         >
+          <h1 className="absolute text-9xl md:-top-[-4%] -top-[2%] left-[5%] text-shadow-stroke text-transparent">
+          New Works
+        </h1>
           {showOverlay && (
             <Overlayer
               card={selectedCard}
