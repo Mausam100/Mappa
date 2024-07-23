@@ -1,7 +1,13 @@
 import React from "react";
+import CanvasAnim from "../Components/CanvasAnim";
 import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
 
 function Top() {
+  const scrollHeight = 10000; // Example scroll height
+  const numFrames = 50; // Number of frames in the animation
+  const width = 1920; // Width of the canvas
+  const height = 1080; // Height of the canvas
+
   return (
     <section className="w-full   bg-black relative">
       <div className="text-center relative h-fit p-12">
@@ -20,6 +26,15 @@ function Top() {
         muted
         loop
       ></video>
+
+      <div>
+        <ImageCanvas
+          scrollHeight={scrollHeight}
+          numFrames={numFrames}
+          width={width}
+          height={height}
+        />
+      </div>
     </section>
   );
 }
