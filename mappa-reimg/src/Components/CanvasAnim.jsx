@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-("../assets/images/canvas_render/");
+import React, { useRef, useEffect, useState } from 'react';
 
 function getCurrentFrame(index) {
   return `./canvas_render/${index.toString().padStart(4, "0")}.png`;
@@ -12,12 +11,17 @@ const CanvasAnim = ({ scrollHeight, numFrames, width, height }) => {
 
   // Step 1: Load images
   function preloadImages() {
+    const tempImages = [];
     for (let i = 1; i <= numFrames; i++) {
       const img = new Image();
       const imgSrc = getCurrentFrame(i);
       img.src = imgSrc;
-      setImages((prevImages) => [...prevImages, img]);
+      img.onerror = () => {
+        console.error(`Failed to load image ${imgSrc}`);
+      };
+      tempImages.push(img);
     }
+    setImages(tempImages);
   }
 
   // Step 2: Handle scroll events
@@ -59,7 +63,10 @@ const CanvasAnim = ({ scrollHeight, numFrames, width, height }) => {
     let requestId;
 
     const render = () => {
-      context.drawImage(images[frameIndex], 0, 0);
+      if (images[frameIndex] && images[frameIndex].complete) {
+        context.clearRect(0, 0, width, height);
+        context.drawImage(images[frameIndex], 0, 0);
+      }
       requestId = requestAnimationFrame(render);
     };
 
