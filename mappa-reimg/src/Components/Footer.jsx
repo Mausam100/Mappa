@@ -50,8 +50,8 @@ const Footer = () => {
         </div>
         <div>
           <h3 className="text-lg font-normal mb-2 text-green-500">SOCIALS</h3>
-          <p className="transition-all duration-300 hover:text-blue-400 ease-in-out">Twitter</p>
-          <p className="transition-all duration-300 hover:text-red-500 ease-in-out">Youtube</p>
+          <p className="transition-all duration-300 hover:text-blue-400 ease-in-out cursor-pointer">Twitter</p>
+          <p className="transition-all duration-300 hover:text-red-500 ease-in-out cursor-pointer">Youtube</p>
         </div>
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mt-10 border-t border-gray-700 pt-5">

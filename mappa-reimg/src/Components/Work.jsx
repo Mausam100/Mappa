@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import GroupText from "../assets/images/icons/Group.svg";
 import Scroll from "../assets/images/icons/Scroll.png";
@@ -12,6 +13,7 @@ const Work = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
   const sliderRef = useRef(null);
+  const workRef = useRef(null); // Reference to the Work component
 
   const toggleOverlay = (card) => {
     setSelectedCard(card);
@@ -53,24 +55,24 @@ const Work = () => {
   }, []);
 
   return (
-
     <>
       <Element name="section2" className="w-full h-full text-white">
-        
         <section
+          ref={workRef} // Attach the ref here
           id="work"
           className="relative md:pt-10 pt-20 w-full h-full flex-col items-center justify-center bg-black text-white"
         >
-          <h1 className="uppercase absolute text-9xl md:-top-[-4%] -top-[2%] left-[5%] text-shadow-stroke text-transparent ibm-normal ">
-          New Works
-        </h1>
+          <MouseFollower containerRef={workRef} hoverText="Hovering!" />
+          <h1 className="uppercase absolute text-9xl md:-top-[-4%] -top-[2%] left-[5%] text-shadow-stroke text-transparent ibm-normal">
+            New Works
+          </h1>
           {showOverlay && (
             <Overlayer
               card={selectedCard}
               toggleOverlay={() => toggleOverlay(null)}
             />
           )}
-          <div className="relative mx-4 pt-20 overflow-hidden rounded-md">
+          <div className="relative mx-4 pt-20 overflow-hidden rounded-md cursor-pointer">
             <div
               className="w-full overflow-x-scroll scrollbarnone flex"
               ref={sliderRef}
