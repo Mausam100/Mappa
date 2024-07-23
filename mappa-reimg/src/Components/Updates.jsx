@@ -166,7 +166,7 @@ function Updates() {
                     {data.title}
                   </span>
                 </span>
-                <span className="update-details bg-white text-black px-2 py- rounded-3xl text-nowrap text-sm">Click for more details</span>
+                <span className="update-details transition-all duration-500 bg-white text-black px-2 py- rounded-3xl text-nowrap text-sm">Click for more details</span>
                 <span id="updates_catagory" className="uppercase text-green-600">
                   {data.tag}
                 </span>

@@ -142,7 +142,7 @@
   bottom: 30%;
   opacity: 0;
   visibility: hidden;
-  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+  /* transition: cubic-bezier(0.19, 1, 0.22, 1) 0.8s; */
 }
 
 .update-item:hover .update-details {
@@ -150,3 +150,29 @@
   visibility: visible;
 }
 
+.bento-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bento-btn span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  left: 0%;
+  bottom: -100%;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.bento-btn:hover span::after {
+  bottom: 0;
+}
+
+.bento-btn:hover span {
+  color: rgb(255, 255, 255);
+  z-index: 10;
+}

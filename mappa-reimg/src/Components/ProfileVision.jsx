@@ -9,9 +9,11 @@ const ProfileVision = () => {
         <p className="mt-4 w-full md:w-2/3 jap text-2xl font-light">
           テレビアニメを中心に、映画、CM、Webムービー等、ジャンルにとらわれない様々な映像作品の企画・制作を行っています。また、自社で権利を保有するIPの窓口権を運用し、国内外でのライツ事業も展開しています。
         </p>
-        <div className="mt-8 self-center w-fit flex gap-3 flex-row justify-start items-center bg-black text-[#e6e6e6] px-8 py-3 rounded-full">
-          <button className="text-lg">company</button>
-          <FaRegArrowAltCircleUp className="rotate-45" />
+        <div className="mt-8 self-center w-fit flex gap-2 flex-row justify-start items-center bg-black text-[#e6e6e6] px-6 py-2 rounded-full">
+          <button className="flex text-2xl gap-4 group">
+            company
+            <FaRegArrowAltCircleUp className="text-3xl transition-transform duration-300 group-hover:rotate-90" />
+          </button>
         </div>
       </div>
 
