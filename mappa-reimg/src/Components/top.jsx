@@ -28,7 +28,7 @@ function Top() {
       ></video>
 
       <div>
-        <ImageCanvas
+        <CanvasAnim
           scrollHeight={scrollHeight}
           numFrames={numFrames}
           width={width}

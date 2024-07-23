@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 
 function getCurrentFrame(index) {
   // return new URL(`./img/${index.toString().padStart(4, "0")}.png`, import.meta.url).href;
-  return `./img/${index.toString().padStart(4, "0")}.png`;
+  return `./canvas_render/${index.toString().padStart(4, "0")}.png`;
 }
 
 const CanvasAnim = ({ scrollHeight, numFrames, width, height }) => {
