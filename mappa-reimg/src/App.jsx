@@ -8,13 +8,15 @@ import LocomotiveScroll from "locomotive-scroll";
 import Updates from "./Components/Updates";
 import ProfileVision from "./Components/ProfileVision";
 import Bento from "./Components/Bento";
+import CanvasAnim from "./Components/CanvasAnim";
 import Top from "./Components/top";
 
 function App() {
+
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector('.app'),
-      smooth: true
+      el: document.querySelector(".app"),
+      smooth: true,
     });
     return () => locomotiveScroll.destroy(); // Cleanup on unmount
   }, []);
@@ -26,10 +28,11 @@ function App() {
         <div className="fixed z-0">
           <Hero />
         </div>
-        <div className="w-full h-[100vh] bg-transparent"></div> 
+        <div className="w-full h-[100vh] bg-transparent"></div>
         <ProfileVision />
         <Work />
-        <Top/>
+        <Top />
+        <CanvasAnim />
         <Updates />
         <Bento />
         <Footer />
