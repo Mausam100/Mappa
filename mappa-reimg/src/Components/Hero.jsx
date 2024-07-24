@@ -53,7 +53,7 @@ const Hero = () => {
               ></video>
             ))}
 
-            <section className="absolute z-40 top-[30%] left-[18%]">
+            <section className="hidden md:block absolute z-40 top-[30%] left-[18%]">
               <div className="bg-[#006837b7] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
                 <h3 className="text-end font-thin leading-tighter tracking-tighter">
                   4月9日（火）深夜24時
