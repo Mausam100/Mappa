@@ -109,7 +109,7 @@ const Work = () => {
               >
                 <div>
                   <div className="flex gap-3">
-                    <h1 className="font-semibold text-lg uppercase">
+                    <h1 className="font-semibold text-lg uppercase ibm-normal">
                       Explore All
                     </h1>
                   </div>

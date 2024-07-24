@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ProfileVision = () => {
   return (
@@ -10,9 +10,9 @@ const ProfileVision = () => {
           テレビアニメを中心に、映画、CM、Webムービー等、ジャンルにとらわれない様々な映像作品の企画・制作を行っています。また、自社で権利を保有するIPの窓口権を運用し、国内外でのライツ事業も展開しています。
         </p>
         <div className="mt-8 self-center w-fit flex gap-2 flex-row justify-start items-center bg-black text-[#e6e6e6] px-6 py-2 rounded-full">
-          <button className="flex text-2xl gap-4 group">
+          <button className="flex text-2xl gap-1 group items-center">
             company
-            <FaRegArrowAltCircleUp className="text-3xl transition-transform duration-300 group-hover:rotate-90" />
+            <IoIosArrowRoundForward className=" text-3xl transition-transform duration-300 group-hover:-rotate-45" />
           </button>
         </div>
       </div>
