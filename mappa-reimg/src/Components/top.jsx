@@ -1,5 +1,4 @@
 import React from "react";
-import CanvasAnim from "../Components/CanvasAnim";
 import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
 
 function Top() {
@@ -26,15 +25,6 @@ function Top() {
         muted
         loop
       ></video>
-
-      <div>
-        <CanvasAnim
-          scrollHeight={scrollHeight}
-          numFrames={numFrames}
-          width={width}
-          height={height}
-        />
-      </div>
     </section>
   );
 }
