@@ -6,6 +6,7 @@ import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
 import JJKTrailer from "../assets/videos/jujutsu-kaisen-trailer.mp4";
 import ChainsawTrailer from "../assets/videos/chainsawman-rezearc-trailer.mp4";
 
+
 import { motion, useScroll, useTransform } from "framer-motion";
 
 
@@ -49,14 +50,16 @@ const Hero = () => {
           }}
           className=" flex gap-10 items-center justify-center rounded-md w-full ">
             {videos.map((vedio, index) => (
-              <video
-                className="w-[60vw] transform transition-transform duration-300 rounded-md object-contain"
-                src={vedio}
-                autoPlay
-                muted
-                loop
-              ></video>
+              
+                <video
+                  className="w-[60vw] transform transition-transform duration-300 rounded-md object-contain"
+                  src={vedio}
+                  autoPlay
+                  muted
+                  loop
+                ></video>
             ))}
+          </motion.div>
 
         <section className=" hidden absolute z-40 top-6 items-center w-full h-[100vh] pl-16 md:flex">
           <div className="bg-[#006837b7] w-60 h-auto rounded-xl mt-16 ml-20 p-5">
