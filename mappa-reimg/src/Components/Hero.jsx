@@ -2,13 +2,12 @@ import React from "react";
 
 import OblivionTrailer from "../assets/videos/oblivion-battery-trailer.mp4";
 import BucchigiriTrailer from "../assets/videos/bucchigiri-trailer.mp4";
-import MaboroshiTrailer from "../assets/videos/maboroshi-trailer.mp4";
 import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
 import JJKTrailer from "../assets/videos/jujutsu-kaisen-trailer.mp4";
 import ChainsawTrailer from "../assets/videos/chainsawman-rezearc-trailer.mp4";
 
 
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 
 
@@ -21,13 +20,13 @@ const Hero = () => {
     ChainsawTrailer,
     // MaboroshiTrailer,
   ];
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 500], [1, 0.5]);
 
   return (
     <>
     
-    <main className="main text-white bg-black md:pb-10">
+    <section className="main text-white bg-black md:pb-10">
     
       <motion.div
         initial={{ x: -2000 }}
@@ -91,7 +90,7 @@ const Hero = () => {
         </footer>
         
       </motion.div>
-    </main>
+    </section>
     
 
     </>

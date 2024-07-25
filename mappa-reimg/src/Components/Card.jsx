@@ -6,7 +6,7 @@ function Card({title, img, top}) {
   
   return (
     <div className="">
-      {/* <MouseFollower/> */}
+      
       {top && (
         <div className=" flex items-center gap-3  ">
           <h1 className=" font-semibold text-sm text-nowrap uppercase ibm-normal">{title}</h1>
