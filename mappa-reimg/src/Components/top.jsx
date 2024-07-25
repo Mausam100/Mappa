@@ -1,5 +1,6 @@
 import React from "react";
-import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
+// import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
+import AnimationCanvas from "./AnimationCanvas";
 
 function Top() {
   const scrollHeight = 10000; // Example scroll height
@@ -18,13 +19,18 @@ function Top() {
           AND HAS PRODUCED GREAT PROFITS FOR US AND OUR PARTNERS
         </p>
       </div>
-      <video
+      <div className=" w-full flex items-center justify-center">
+        
+      <AnimationCanvas/>
+      </div>
+      {/* <video
         className="h-[100vh] w-full duration-300 rounded-md object-fit"
         src={AOTTrailer}
         autoPlay
         muted
         loop
-      ></video>
+      ></video> */}
+      
     </section>
   );
 }

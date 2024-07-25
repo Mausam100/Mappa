@@ -1,11 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --text-stroke-color: #656565;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* @import './styles/locomotive-scroll.css'; */
+
 
 @font-face {
   font-family: "ibmplexmono-bold";
@@ -178,14 +180,14 @@
   z-index: 10;
 }
 
-/* src/index.css or src/App.css */
+
 
 #animation-canvas {
   position: relative;
-
-  height: 150vh; /* Extra height for scrolling */
+  height: 100vh; /* Extra height for scrolling */
   width: 100%;
   overflow: hidden;
+  
 }
 
 #animation-canvas canvas {
@@ -194,15 +196,8 @@
   left: 0;
   width: 100%;
   height: 100%;
+  
 }
 
-#animation-canvas h2 {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.25rem; /* Tailwind's text-4xl */
-  color: white;
-}
+
 

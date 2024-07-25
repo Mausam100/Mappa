@@ -3,22 +3,16 @@ import Hero from "./Components/Hero";
 import Work from "./Components/Work";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import LocomotiveScroll from "locomotive-scroll";
+import LocomotiveScroll from 'locomotive-scroll';
 import Updates from "./Components/Updates";
 import ProfileVision from "./Components/ProfileVision";
 import Bento from "./Components/Bento";
-// import Top from "./Components/top";
-import Canvas from "./Components/AnimationCanvas";
+import Top from "./Components/top";
+
 
 function App() {
 
-  useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector(".app"),
-      smooth: true,
-    });
-    return () => locomotiveScroll.destroy();
-  }, []);
+  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <main className="app text-white bg-black w-full overflow-hidden">
@@ -30,8 +24,10 @@ function App() {
         <div className="w-full h-[100vh] bg-transparent"></div>
         <ProfileVision />
         <Work />
-        {/* <Top /> */}
-        <Canvas></Canvas>
+
+        
+        <Top />
+        
         <Updates />
         <Bento />
         <Footer />

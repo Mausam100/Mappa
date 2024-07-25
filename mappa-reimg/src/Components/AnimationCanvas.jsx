@@ -24,7 +24,7 @@ const AnimationCanvas = () => {
     const loadImages = () => {
       for (let i = 1; i <= frameCount; i++) {
         const img = new Image();
-        img.src = files(i); // Image path construction
+        img.src = files(i);
         images.current.push(img);
       }
     };
@@ -40,13 +40,12 @@ const AnimationCanvas = () => {
     gsap.to(imageSeq.current, {
       frame: frameCount - 1,
       snap: 'frame',
-      ease: 'none',
       scrollTrigger: {
         scrub: 0.1,
         trigger: '#animation-canvas',
         start: 'top top',
         end: '600% top',
-        pin:"true"
+        // pin:true,
       },
       onUpdate: render,
     });
@@ -91,10 +90,9 @@ const AnimationCanvas = () => {
 
   return (
     <section id="animation-canvas" className={styles.animationCanvas}>
-        
+      
 
       <canvas ref={canvasRef} className={styles.canvas}></canvas>
-    
     </section>
   );
 };
