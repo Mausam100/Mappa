@@ -88,7 +88,7 @@ function Bento() {
               <div className="card-img flex justify-center items-center"></div>
             </div>
             <div className="third">
-              <button className="border-2 border-none bg-[#006837] transition-all duration-500 hover:mx-2 hover:my-2 rounded-2xl w-full h-full flex flex-col justify-center items-center gap-4 ibm-normal">
+              <button className="border-2 border-none bg-[#006837] transition-all duration-500 hover:scale-110 rounded-2xl w-full h-full flex flex-col justify-center items-center gap-4 ibm-normal">
                 <div>
                   <h6 className="uppercase text-sm">visit</h6>
                   <h1 className="uppercase text-lg">mappa online shop</h1>
