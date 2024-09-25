@@ -1,10 +1,10 @@
 import React from "react";
 
-import OblivionTrailer from "../assets/videos/oblivion-battery-trailer.mp4";
-import BucchigiriTrailer from "../assets/videos/bucchigiri-trailer.mp4";
-import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer.mp4";
-import JJKTrailer from "../assets/videos/jujutsu-kaisen-trailer.mp4";
-import ChainsawTrailer from "../assets/videos/chainsawman-rezearc-trailer.mp4";
+import OblivionTrailer from "../assets/videos/oblivion-battery-trailer2.mp4";
+import BucchigiriTrailer from "../assets/videos/bucchigiri-trailer2.mp4";
+import AOTTrailer from "../assets/videos/attack-on-titan-s4p4-trailer2.mp4";
+import JJKTrailer from "../assets/videos/jujutsu-kaisen-trailer2.mp4";
+import ChainsawTrailer from "../assets/videos/chainsawman-rezearc-trailer2.mp4";
 
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -18,7 +18,6 @@ const Hero = () => {
     AOTTrailer,
     BucchigiriTrailer,
     ChainsawTrailer,
-    // MaboroshiTrailer,
   ];
   const { scrollY } = useScroll();
   const scale = useTransform(scrollY, [0, 500], [1, 0.5]);
